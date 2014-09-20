@@ -1,5 +1,5 @@
-// counter starts at 0
-session.setDefault("counter", 0);
+Hospital = new Meteor.Collection("hospital");
+HospitalVisit = new Meteor.Collection("hospitalvisit");
 
 Template.hello.helpers({
   counter: function () {

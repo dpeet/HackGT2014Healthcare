@@ -6,7 +6,7 @@ DrugUsage = new Meteor.Collection("drugUsage");
 Meteor.startup(function () {
 	/* TODO remove this bit */
 	Hospital.remove({});
-	HospitalVisit.remove({});
+	MajorEvent.remove({});
 	Drug.remove({});
 	DrugUsage.remove({});
 	

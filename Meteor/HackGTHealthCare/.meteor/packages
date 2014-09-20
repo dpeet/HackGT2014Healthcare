@@ -7,4 +7,5 @@ meteor-platform
 autopublish
 insecure
 accounts-ui
-
+iron:router
+mrt:highcharts

@@ -31,7 +31,7 @@ Meteor.startup(function() {
 		var d = Drug.find({name: "Fentanyl"}).fetch();
 
     var data = [{
-        "title: "Motorcycle Accident - Grady",
+        "title": "Motorcycle Accident - Grady",
         "date": "3/3/2014",
         "time": "1 pm",
         "tags": "Shoulder",
@@ -56,7 +56,7 @@ Meteor.startup(function() {
         "title": "Midnight Dislocation - Santa Rosa",
         "date": "8/30/2014",
         "time": "1 am",
-        "tags: "Shoulder",
+        "tags": "Shoulder",
         "hospitalId": h[0]._id,
         "otherLocation": "",
         "notes": "In the Grady trauma ER they performed the reduction on my right shoulder back in.  Afterwards both my left and right shoulders would sublux",

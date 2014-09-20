@@ -15,10 +15,3 @@ Template.hello.events({
     Session.set("counter", Session.get("counter") + 1);
   }
 });
-
-Router.map(function () {
-  this.route('about');  // By default, path = '/about', template = 'about'
-  this.route('home', {
-    path: '/',  //overrides the default '/home'
-  });
-});

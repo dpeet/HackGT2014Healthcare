@@ -27,7 +27,7 @@ Meteor.startup(function () {
 		var d = Drug.find({name: "Fentanyl"}).fetch();
 		
 		MajorEvent.insert({time: "1 pm", date: "3/3/2014", hospitalId: h._id, otherLocation: "In the Grady trauma ER they performed the reduction on my right shoulder back in.  Afterwards both my left and right shoulders would sublux", tags: "Shoulder", notes: "", drugs: d._id+""});
-		MajorEvent.insert({time: "5 pm", date: "5/3/2014", hospitalId: h._id, otherLocation: "They put your shoulder back in at Gwinnett Medical Center - Duluth ER.", tags: "Shoulder", notes: "", drugs: d._id+""})l
+		MajorEvent.insert({time: "5 pm", date: "5/3/2014", hospitalId: h._id, otherLocation: "They put your shoulder back in at Gwinnett Medical Center - Duluth ER.", tags: "Shoulder", notes: "", drugs: d._id+""});
 		MajorEvent.insert({time: "1 am", date: "8/30/2014", hospitalId: h._id, otherLocation: "In the Grady trauma ER they performed the reduction on my right shoulder back in.  Afterwards both my left and right shoulders would sublux", tags: "Shoulder", notes: "", drugs: d._id+""});
 		
 	}

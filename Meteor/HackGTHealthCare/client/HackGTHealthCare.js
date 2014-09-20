@@ -13,3 +13,4 @@ Template.hello.events({
     Session.set("counter", Session.get("counter") + 1);
   }
 });
+

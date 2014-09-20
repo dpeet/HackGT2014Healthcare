@@ -1,6 +1,6 @@
-Customers =  new Meteor.Collection("customers");
+MajorEvents =  new Meteor.Collection("majorEvents");
 
-Customers.allow({
+MajorEvents.allow({
   insert: function(){
     return true;
   },

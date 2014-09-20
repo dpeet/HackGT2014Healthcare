@@ -1,11 +1,11 @@
 Meteor.methods({
-  createNewCustomer: function(data){
+  createNewMajorEvent: function(data){
     data.createdAt = new Date();
-    return Customers.insert(data);
+    return MajorEvents.insert(data);
   },
-  updateCustomer: function(data){
+  updateMajorEvent: function(data){
     data.createdAt = new Date();
-    return Customers.update({_id: data._id}, {$set:{
+    return MajorEvents.update({_id: data._id}, {$set:{
       FirstName: data.FirstName,
       LastName: data.LastName,
       Company: data.Company,

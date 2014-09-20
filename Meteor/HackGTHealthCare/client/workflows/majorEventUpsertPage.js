@@ -1,20 +1,20 @@
 
 Router.map(function(){
-  this.route('customerUpsertPage', {
-    path: '/newcustomer',
-    template: 'customerUpsertPage',
+  this.route('majorEventUpsertPage', {
+    path: '/newmajorEvent',
+    template: 'majorEventUpsertPage',
     waitOn: function(){
-      return Meteor.subscribe('customers');
+      return Meteor.subscribe('majorEvents');
     }
   });
-  this.route('customerUpsertPage', {
-    path: '/editcustomer/:id',
-    template: 'customerUpsertPage',
+  this.route('majorEventUpsertPage', {
+    path: '/editmajorEvent/:id',
+    template: 'majorEventUpsertPage',
     waitOn: function(){
-      return Meteor.subscribe('customers');
+      return Meteor.subscribe('majorEvents');
     },
     data: function(){
-      return Customers.findOne(this.params.id);
+      return MajorEvents.findOne(this.params.id);
     }
   });
 });
@@ -22,93 +22,93 @@ Router.map(function(){
 //-------------------------------------------------------------
 
 
-Template.customerUpsertPage.events({
+Template.majorEventUpsertPage.events({
   'keyup #firstNameInput':function(){
-    Customers.update({_id: this._id}, {
+    MajorEvents.update({_id: this._id}, {
       $set: {
         'FirstName': $('#firstNameInput').val()
       }
     });
   },
   'keyup #lastNameInput':function(){
-    Customers.update({_id: this._id}, {
+    MajorEvents.update({_id: this._id}, {
       $set: {
         'LastName': $('#lastNameInput').val()
       }
     });
   },
   'keyup #companyInput':function(){
-    Customers.update({_id: this._id}, {
+    MajorEvents.update({_id: this._id}, {
       $set: {
         'Company': $('#companyInput').val()
       }
     });
   },
   'keyup #addressInput':function(){
-    Customers.update({_id: this._id}, {
+    MajorEvents.update({_id: this._id}, {
       $set: {
         'Address': $('#addressInput').val()
       }
     });
   },
   'keyup #cityInput':function(){
-    Customers.update({_id: this._id}, {
+    MajorEvents.update({_id: this._id}, {
       $set: {
         'City': $('#cityInput').val()
       }
     });
   },
   'keyup #countyInput':function(){
-    Customers.update({_id: this._id}, {
+    MajorEvents.update({_id: this._id}, {
       $set: {
         'County': $('#countyInput').val()
       }
     });
   },
   'keyup #stateInput':function(){
-    Customers.update({_id: this._id}, {
+    MajorEvents.update({_id: this._id}, {
       $set: {
         'State': $('#stateInput').val()
       }
     });
   },
   'keyup #zipInput':function(){
-    Customers.update({_id: this._id}, {
+    MajorEvents.update({_id: this._id}, {
       $set: {
         'Zip': $('#zipInput').val()
       }
     });
   },
   'keyup #phoneInput':function(){
-    Customers.update({_id: this._id}, {
+    MajorEvents.update({_id: this._id}, {
       $set: {
         'Phone': $('#phoneInput').val()
       }
     });
   },
   'keyup #faxInput':function(){
-    Customers.update({_id: this._id}, {
+    MajorEvents.update({_id: this._id}, {
       $set: {
         'Fax': $('#faxInput').val()
       }
     });
   },
   'keyup #emailInput':function(){
-    Customers.update({_id: this._id}, {
+    MajorEvents.update({_id: this._id}, {
       $set: {
         'Email': $('#emailInput').val()
       }
     });
   },
   'keyup #webInput':function(){
-    Customers.update({_id: this._id}, {
+    MajorEvents.update({_id: this._id}, {
       $set: {
         'Web': $('#webInput').val()
       }
     });
   },
-  'click #previewCustomerButton':function(){
-    Router.go('/customer/' + this._id);
+  'click #previewMajorEventButton':function(){
+    Router.go('/majorEvent/' + this._id);
   }
 });
 
@@ -116,7 +116,7 @@ Template.customerUpsertPage.events({
 
 //-------------------------------------------------------------
 
-Template.customerUpsertPage.helpers({
+Template.majorEventUpsertPage.helpers({
   getRecordId: function() {
     if(this._id) {
       return this._id;
@@ -126,13 +126,13 @@ Template.customerUpsertPage.helpers({
   }
 });
 
-Template.customerUpsertPage.events({
-  'click #upsertCustomerButton': function() {
+Template.majorEventUpsertPage.events({
+  'click #upsertMajorEventButton': function() {
     console.log('creating new user...');
 
       // TODO:  add validation functions
 
-      var customerObject = {
+      var majorEventObject = {
         FirstName: $('#firstNameInput').val(),
         LastName: $('#lastNameInput').val(),
         Company: $('#companyInput').val(),
@@ -151,27 +151,27 @@ Template.customerUpsertPage.events({
       if(this._id){
         console.log('upserting ' + this._id);
         var self = this;
-        customerObject._id = this._id;
-        Meteor.call('updateCustomer', customerObject, function(error, customer){
+        majorEventObject._id = this._id;
+        Meteor.call('updateMajorEvent', majorEventObject, function(error, majorEvent){
           console.log('error: ' + error);
-          if(customer){
-            console.log('customer: ' + customer);
-            Router.go('/customer/' + self._id);
+          if(majorEvent){
+            console.log('majorEvent: ' + majorEvent);
+            Router.go('/majorEvent/' + self._id);
           }
         });
       }else{
-        Meteor.call('createNewCustomer', customerObject, function(error, customer) {
+        Meteor.call('createNewMajorEvent', majorEventObject, function(error, majorEvent) {
           console.log('error: ' + error);
-          console.log('customer: ' + customer);
-          Router.go('/customer/' + customer);
+          console.log('majorEvent: ' + majorEvent);
+          Router.go('/majorEvent/' + majorEvent);
         });
       }
 
   },
   'click #deleteUserButton': function() {
-    Customers.remove(Session.get('selected_user'));
+    MajorEvents.remove(Session.get('selected_user'));
   },
   'click #cancelDeleteButton': function() {
-    Router.go('/customers');
+    Router.go('/majorEvents');
   }
 });

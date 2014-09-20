@@ -1,13 +1,13 @@
-<template name="customersListPage">
-  <div id="customersListPage">
+<template name="majorEventsListPage">
+  <div id="majorEventsListPage">
     <div class="container">
 
         <div class="row">
           <div class="col col-md-6">
-            <input id="customersSearchInput" type="text" class="form-control" placeholder="search..." />
+            <input id="majorEventsSearchInput" type="text" class="form-control" placeholder="search..." />
           </div>
           <div class="centered col col-md-6">
-            <div id="customersListLimitButtons" class="pull-right btn-group">
+            <div id="majorEventsListLimitButtons" class="pull-right btn-group">
               <button id="twentyButton" class="{{isTwentyActive}} btn btn-default">20</button>
               <button id="fiftyButton" class="{{isFiftyActive}} btn btn-default">50</button>
               <button id="hundredButton" class="{{isHundredActive}} btn btn-default">100</button>
@@ -16,9 +16,9 @@
         </div>
       <hr/>
 
-      <table id="customersTable" class="table table-hover table-striped tablesorter">
-        <thead id="customersTableHeader">
-          <tr id="customersTableHeaderRow">
+      <table id="majorEventsTable" class="table table-hover table-striped tablesorter">
+        <thead id="majorEventsTableHeader">
+          <tr id="majorEventsTableHeaderRow">
             <th id="firstNameColumn">First Name</th>
             <th id="lastNameColumn">Last Name</th>
             <th id="companyColumn">Company</th>
@@ -27,8 +27,8 @@
           </tr>
         </thead>
         <tbody>
-          {{#each customersList}}
-            <tr class="customerRow">
+          {{#each majorEventsList}}
+            <tr class="majorEventRow">
               <td>{{FirstName}}</td>
               <td>{{LastName}}</td>
               <td>{{Company}}</td>
@@ -40,7 +40,7 @@
       </table>
       <hr>
 
-      <div id="customersListPaginationButtons" class="btn-group">
+      <div id="majorEventsListPaginationButtons" class="btn-group">
         {{#each paginationButtonList }}
           {{> paginationButton }}
         {{/each}}

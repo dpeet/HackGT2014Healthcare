@@ -14,9 +14,9 @@ Router.configure({
 Router.map(function(){
   this.route('homeRoute', {
     path: '/',
-    template: "customersListPage",
+    template: "majorEventsListPage",
     waitOn: function(){
-      return Meteor.subscribe('customers');
+      return Meteor.subscribe('majorEvents');
     }
   });
 });

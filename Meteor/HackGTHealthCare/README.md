@@ -20,10 +20,10 @@ Refactoring
 
 ````sh
 # you'll want to search through the application, and refactor the following terms
-customers > foos
-customer > foo
-Customers > Foos
-Customer > Foo
+majorEvents > foos
+majorEvent > foo
+MajorEvents > Foos
+MajorEvent > Foo
 ````
 
 ``command-d`` does a multi-select in many popular editors.

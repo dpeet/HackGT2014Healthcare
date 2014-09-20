@@ -13,22 +13,22 @@ module.exports = {
       .verify.elementPresent('#mainPanel')
 
       .verify.elementPresent('#appTitle')
-      .verify.elementPresent('#customersListLink')
-      .verify.elementPresent('#newCustomerLink')
+      .verify.elementPresent('#majorEventsListLink')
+      .verify.elementPresent('#newMajorEventLink')
 
       .verify.containsText('#appTitle', "Clinical UI - Crud Table")
       //========================================================================
       // CUSTOMER LIST PAGE (NEW)
 
-      .verify.elementPresent('#customersListPage', "//----------------------------------------------------------")
-      .verify.elementPresent('#customersListPage', "//CUSTOMER LIST PAGE (NEW)")
+      .verify.elementPresent('#majorEventsListPage', "//----------------------------------------------------------")
+      .verify.elementPresent('#majorEventsListPage', "//CUSTOMER LIST PAGE (NEW)")
 
-      .verify.elementPresent('#customersTable')
-      .verify.elementPresent('#customersTableHeader')
-      .verify.elementPresent('#customersTableHeaderRow')
-      .verify.elementPresent('#customersSearchInput')
-      .verify.elementPresent('#customersListPaginationButtons')
-      .verify.elementPresent('#customersListLimitButtons')
+      .verify.elementPresent('#majorEventsTable')
+      .verify.elementPresent('#majorEventsTableHeader')
+      .verify.elementPresent('#majorEventsTableHeaderRow')
+      .verify.elementPresent('#majorEventsSearchInput')
+      .verify.elementPresent('#majorEventsListPaginationButtons')
+      .verify.elementPresent('#majorEventsListLimitButtons')
 
       .verify.elementPresent('#firstNameColumn')
       .verify.elementPresent('#lastNameColumn')
@@ -42,24 +42,24 @@ module.exports = {
       .verify.containsText("#zipColumn", "Zip")
       .verify.containsText("#emailColumn", "Email")
 
-      .setValue("#customersSearchInput", "Inafuku")
+      .setValue("#majorEventsSearchInput", "Inafuku")
 
-      .verify.containsText('#customersTable tr td:nth-child(1)', "Deshawn")
-      .verify.containsText('#customersTable tr td:nth-child(2)', 'Inafuku')
-      .verify.containsText('#customersTable tr td:nth-child(3)', 'Telair Div Of Teleflex Inc')
-      .verify.containsText('#customersTable tr td:nth-child(4)', '78408')
-      .verify.containsText('#customersTable tr td:nth-child(5)', 'deshawn@inafuku.com')
+      .verify.containsText('#majorEventsTable tr td:nth-child(1)', "Deshawn")
+      .verify.containsText('#majorEventsTable tr td:nth-child(2)', 'Inafuku')
+      .verify.containsText('#majorEventsTable tr td:nth-child(3)', 'Telair Div Of Teleflex Inc')
+      .verify.containsText('#majorEventsTable tr td:nth-child(4)', '78408')
+      .verify.containsText('#majorEventsTable tr td:nth-child(5)', 'deshawn@inafuku.com')
 
-      .click('#newCustomerLink')
+      .click('#newMajorEventLink')
 
       //========================================================================
       // CUSTOMER UPSERT PAGE (NEW)
 
 
-      .waitForElementVisible("#customerUpsertCard", 1000)
+      .waitForElementVisible("#majorEventUpsertCard", 1000)
 
-        .verify.elementPresent('#customerUpsertCard', "//----------------------------------------------------------")
-        .verify.elementPresent('#customerUpsertCard', "//CUSTOMER UPSERT PAGE (NEW)")
+        .verify.elementPresent('#majorEventUpsertCard', "//----------------------------------------------------------")
+        .verify.elementPresent('#majorEventUpsertCard', "//CUSTOMER UPSERT PAGE (NEW)")
 
         .verify.elementPresent('#firstNameLabel')
         .verify.elementPresent('#lastNameLabel')
@@ -117,8 +117,8 @@ module.exports = {
         .verify.containsText('#emailInput', "")
         .verify.containsText('#notesInput', "")
 
-        .verify.elementPresent('#upsertCustomerButton')
-        .verify.containsText('#upsertCustomerButton', "Save Customer")
+        .verify.elementPresent('#upsertMajorEventButton')
+        .verify.containsText('#upsertMajorEventButton', "Save MajorEvent")
 
         .setValue('#firstNameInput', "Jane")
         .setValue('#lastNameInput', "Doe")
@@ -134,17 +134,17 @@ module.exports = {
         .setValue('#emailInput', "janedoe@acme.com")
         .setValue('#notesInput', "Lorem textum...")
 
-        .click('#upsertCustomerButton')
+        .click('#upsertMajorEventButton')
 
 
       //========================================================================
       // CUSTOMER PREVIEW PAGE
 
 
-      .waitForElementVisible("#customerPreviewPage", 1000)
+      .waitForElementVisible("#majorEventPreviewPage", 1000)
 
-      .verify.elementPresent('#customerPreviewPage', "//----------------------------------------------------------")
-      .verify.elementPresent('#customerPreviewPage', "//CUSTOMER PREVIEW PAGE")
+      .verify.elementPresent('#majorEventPreviewPage', "//----------------------------------------------------------")
+      .verify.elementPresent('#majorEventPreviewPage', "//CUSTOMER PREVIEW PAGE")
 
 
       // .verify.elementPresent('#firstNameLabel')
@@ -203,23 +203,23 @@ module.exports = {
       //.verify.containsText('#countyText', "Hudson")
       //.verify.containsText('#faxText', "818-555-1233")
 
-      .verify.elementPresent('#customerEditButton')
-      .verify.containsText('#customerEditButton', "Edit Customer")
+      .verify.elementPresent('#majorEventEditButton')
+      .verify.containsText('#majorEventEditButton', "Edit MajorEvent")
 
-      .verify.elementPresent('#customerDeleteButton')
-      .verify.containsText('#customerDeleteButton', "Delete Customer")
+      .verify.elementPresent('#majorEventDeleteButton')
+      .verify.containsText('#majorEventDeleteButton', "Delete MajorEvent")
 
-      .click("#customerEditButton").pause(1000)
+      .click("#majorEventEditButton").pause(1000)
 
 
     //========================================================================
     // CUSTOMER UPSERT PAGE (EDIT)
 
-    .waitForElementVisible("#customerUpsertPage", 1000)
+    .waitForElementVisible("#majorEventUpsertPage", 1000)
 
-      .verify.elementPresent('#customerUpsertPage')
-      .verify.elementPresent('#customerUpsertPage', "//----------------------------------------------------------")
-      .verify.elementPresent('#customerUpsertPage', "//CUSTOMER UPSERT PAGE (EDIT)")
+      .verify.elementPresent('#majorEventUpsertPage')
+      .verify.elementPresent('#majorEventUpsertPage', "//----------------------------------------------------------")
+      .verify.elementPresent('#majorEventUpsertPage', "//CUSTOMER UPSERT PAGE (EDIT)")
 
       .verify.containsText('#firstNameLabel', "First Name")
       .verify.containsText('#lastNameLabel', "Last Name")
@@ -292,17 +292,17 @@ module.exports = {
       .setValue('#emailInput', "janice@acme.com")
       .setValue('#notesInput', "Textica foretica flom...")
 
-      .verify.elementPresent('#upsertCustomerButton')
-      .click('#upsertCustomerButton')
+      .verify.elementPresent('#upsertMajorEventButton')
+      .click('#upsertMajorEventButton')
 
 
       //========================================================================
       // CUSTOMER PREVIEW PAGE
 
 
-      .waitForElementVisible("#customerPreviewPage", 1000)
-      .verify.elementPresent('#customerPreviewPage', "//----------------------------------------------------------")
-      .verify.elementPresent('#customerPreviewPage', "//CUSTOMER PREVIEW PAGE")
+      .waitForElementVisible("#majorEventPreviewPage", 1000)
+      .verify.elementPresent('#majorEventPreviewPage', "//----------------------------------------------------------")
+      .verify.elementPresent('#majorEventPreviewPage', "//CUSTOMER PREVIEW PAGE")
 
       .verify.elementPresent('#firstNameText')
       .verify.elementPresent('#lastNameText')
@@ -330,30 +330,30 @@ module.exports = {
       .verify.containsText('#emailText', "janice@acme.com")
       .verify.containsText('#notesText', "Textica foretica flom...")
 
-      .verify.elementPresent('#customerEditButton')
-      .verify.elementPresent('#customerDeleteButton')
+      .verify.elementPresent('#majorEventEditButton')
+      .verify.elementPresent('#majorEventDeleteButton')
 
-      .click("#customersListLink").pause(1000)
+      .click("#majorEventsListLink").pause(1000)
 
 
       //========================================================================
       // CUSTOMER LIST PAGE (NEW)
 
-      .verify.elementPresent('#customersListPage', "//----------------------------------------------------------")
-      .verify.elementPresent('#customersListPage', "//CUSTOMERS LIST PAGE")
+      .verify.elementPresent('#majorEventsListPage', "//----------------------------------------------------------")
+      .verify.elementPresent('#majorEventsListPage', "//CUSTOMERS LIST PAGE")
 
-      .verify.elementPresent('#customersTable')
-      .verify.elementPresent('#customersTableHeaderRow')
-      .verify.elementPresent('#customersSearchInput')
+      .verify.elementPresent('#majorEventsTable')
+      .verify.elementPresent('#majorEventsTableHeaderRow')
+      .verify.elementPresent('#majorEventsSearchInput')
 
-      .clearValue('#customersSearchInput')
-      .setValue("#customersSearchInput", "Janice")
+      .clearValue('#majorEventsSearchInput')
+      .setValue("#majorEventsSearchInput", "Janice")
 
-      .verify.containsText('#customersTable tr td:nth-child(1)', "Janice")
-      .verify.containsText('#customersTable tr td:nth-child(2)', 'Doe')
-      .verify.containsText('#customersTable tr td:nth-child(3)', 'Sprocket, Co.')
-      .verify.containsText('#customersTable tr td:nth-child(4)', '07307')
-      .verify.containsText('#customersTable tr td:nth-child(5)', 'janice@acme.com')
+      .verify.containsText('#majorEventsTable tr td:nth-child(1)', "Janice")
+      .verify.containsText('#majorEventsTable tr td:nth-child(2)', 'Doe')
+      .verify.containsText('#majorEventsTable tr td:nth-child(3)', 'Sprocket, Co.')
+      .verify.containsText('#majorEventsTable tr td:nth-child(4)', '07307')
+      .verify.containsText('#majorEventsTable tr td:nth-child(5)', 'janice@acme.com')
 
       .end();
   }

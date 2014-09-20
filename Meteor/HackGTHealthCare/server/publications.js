@@ -1,3 +1,3 @@
-Meteor.publish('customers', function () {
-  return Customers.find();
+Meteor.publish('majorEvents', function () {
+  return MajorEvents.find();
 });

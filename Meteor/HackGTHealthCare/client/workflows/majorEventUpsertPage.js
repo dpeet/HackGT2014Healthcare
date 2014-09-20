@@ -71,7 +71,7 @@ Template.majorEventUpsertPage.events({
       }
     });
   },
-  '
+  
   'click #previewMajorEventButton':function(){
     Router.go('/majorEvent/' + this._id);
   }

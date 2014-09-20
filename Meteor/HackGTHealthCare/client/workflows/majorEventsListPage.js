@@ -28,14 +28,14 @@ Template.majorEventsListPage.helpers({
   majorEventsList: function(){
     var majorEventsCount = MajorEvents.find({$or:[
       {title: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
-      {date: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }}
+      {date: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
       {time: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
-      {tags: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }}
+      {tags: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
       {hospitalId: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
-      {otherLocation: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }}
+      {otherLocation: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
       {notes: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
-      {drugs: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }}
-      {createdAt: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
+      {drugs: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
+      {createdAt: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }}
 
       ]
     }).count();
@@ -43,14 +43,14 @@ Template.majorEventsListPage.helpers({
     Session.set('majorEventsPaginationCount', Math.floor((majorEventsCount - 1) / Session.get('majorEventsTableLimit')) + 1);
     return MajorEvents.find({$or:[
       {title: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
-      {date: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }}
+      {date: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
       {time: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
-      {tags: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }}
+      {tags: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
       {hospitalId: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
-      {otherLocation: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }}
+      {otherLocation: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
       {notes: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
-      {drugs: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }}
-      {createdAt: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
+      {drugs: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
+      {createdAt: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }}
       ]
     },{limit: Session.get('majorEventsTableLimit'), skip: Session.get('majorEventsSkipCount')});
   },

@@ -3,35 +3,32 @@
     <div class="container">
       <div class="col col-md-offset-3 col-md-6">
 
-      <!-- {{> majorEventCard }} -->
-      
-<div id="majorEventPreviewCard" class="card panel panel-default">
-        <div class="panel-heading">
-          <h2><span id="Tite">{{title}}</span></h2>
-          <p id="tagsText">{{ tags}} </p>
-          <h4><span id="dateText">{{date}}</span><span id="timeText"> {{time}}</span></h4>
+        <!-- {{> majorEventCard }} -->
+
+        <div id="majorEventPreviewCard" class="card panel panel-default">
+          <div class="panel-heading">
+            <h2><span id="Tite">{{title}}</span></h2>
+            <p id="tagsText">{{ tags}}</p>
+            <h4><span id="dateText">{{date}}</span><span id="timeText"> {{time}}</span></h4>
+          </div>
+          <div class="panel-body">
+            <h4 id="hospitalIdText">{{hospitalId}}</h4>
+
+            <hr>
+
+            <h4 id="notesText">{{Email}} </h4>
+
+            <hr>
+
+            <h4 id="drugsText">{{Drugs}} </h4>
+
+          </div>
+          <div class="panel-footer">
+            <button id="majorEventEditButton" class="btn btn-warning">Edit MajorEvent</button>
+            <button id="majorEventDeleteButton" class="btn btn-danger">Delete MajorEvent</button>
+            <!-- <div>{{ _id }}</div> -->
+          </div>
         </div>
-        <div class="panel-body">
-          <h4 id="hospitalIdText">{{hospitalId}}</h4>
-          
-          <hr>
-
-          <h4 id="notesText">{{Email}} </h4>
-
-          <hr>
-
-          <h4 id="drugsText">{{Drugs}} </h4>
-
-        </div>
-        <div class="panel-footer">
-          <button id="majorEventEditButton" class="btn btn-warning">Edit MajorEvent</button>
-          <button id="majorEventDeleteButton" class="btn btn-danger">Delete MajorEvent</button>
-          <!-- <div>{{ _id }}</div> -->
-        </div>
-      </div>
-
-
-
       </div>
     </div>
   </div>

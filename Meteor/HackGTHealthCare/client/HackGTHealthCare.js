@@ -1,5 +1,5 @@
 Hospital = new Meteor.Collection("hospital");
-HospitalVisit = new Meteor.Collection("hospitalvisit");
+MajorEvent = new Meteor.Collection("majorEvent");
 Drug = new Meteor.Collection("drug");
 DrugUsage = new Meteor.Collection("drugUsage");
 

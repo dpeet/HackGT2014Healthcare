@@ -1,0 +1,29 @@
+<!-- ============================================================================== -->
+<!-- just the navigation bar at the top of the application -->
+<!-- http://getbootstrap.com/components/#navbar -->
+
+
+<template name="navbarHeader">
+  <nav id="navbarHeader" class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <a id="appTitle" class="navbar-brand" href="/">Clinical UI - Crud Table</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <!-- <ul class="nav navbar-nav">
+      </ul> -->
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a id="customersListLink" href="/customers">List</a></li>
+        <li><a id="newCustomerLink" href="/newcustomer">New</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</template>

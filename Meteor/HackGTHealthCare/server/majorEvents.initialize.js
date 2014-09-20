@@ -31,36 +31,36 @@ Meteor.startup(function() {
 		var d = Drug.find({name: "Fentanyl"}).fetch();
 
     var data = [{
-        title: "Motorcycle Accident - Grady",
-        date: "3/3/2014",
-        time: "1 pm",
-        tags: "Shoulder",
-        hospitalId: h[0]._id,
-        otherLocation: "",
-        notes: "In the Grady trauma ER they performed the reduction on my right shoulder back in.  Afterwards both my left and right shoulders would sublux",
-        drugs: d[0]._id + ""
+        "title: "Motorcycle Accident - Grady",
+        "date": "3/3/2014",
+        "time": "1 pm",
+        "tags": "Shoulder",
+        "hospitalId": h[0]._id,
+        "otherLocation": "",
+        "notes": "In the Grady trauma ER they performed the reduction on my right shoulder back in.  Afterwards both my left and right shoulders would sublux",
+        "drugs": d[0]._id + ""
       },
 
       {
-        title: "Hockey Dislocation - Grady",
-        date: "5/3/2014",
-        time: "5 pm",
-        tags: "Shoulder",
-        hospitalId: h[0]._id,
-        otherLocation: "",
-        notes: "They put your shoulder back in at Gwinnett Medical Center - Duluth ER.",
-        drugs: d[0]._id + ""
+        "title": "Hockey Dislocation - Grady",
+        "date": "5/3/2014",
+        "time": "5 pm",
+        "tags": "Shoulder",
+        "hospitalId": h[0]._id,
+        "otherLocation": "",
+        "notes": "They put your shoulder back in at Gwinnett Medical Center - Duluth ER.",
+        "drugs": d[0]._id + ""
       },
 
       {
-        title: "Midnight Dislocation - Santa Rosa",
-        date: "8/30/2014",
-        time: "1 am",
-        tags: "Shoulder",
-        hospitalId: h[0]._id,
-        otherLocation: "",
-        notes: "In the Grady trauma ER they performed the reduction on my right shoulder back in.  Afterwards both my left and right shoulders would sublux",
-        drugs: d[0]._id + ""
+        "title": "Midnight Dislocation - Santa Rosa",
+        "date": "8/30/2014",
+        "time": "1 am",
+        "tags: "Shoulder",
+        "hospitalId": h[0]._id,
+        "otherLocation": "",
+        "notes": "In the Grady trauma ER they performed the reduction on my right shoulder back in.  Afterwards both my left and right shoulders would sublux",
+        "drugs": d[0]._id + ""
       }
 
     ];

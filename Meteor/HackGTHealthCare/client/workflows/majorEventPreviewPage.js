@@ -11,6 +11,7 @@ Router.map(function(){
     },
   });
 });
+
 Template.majorEventPreviewPage.events({
   'click #majorEventEditButton':function(){
     Router.go('/editmajorEvent/' + this._id);

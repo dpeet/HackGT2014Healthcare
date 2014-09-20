@@ -18,10 +18,10 @@ module.exports = {
 
       .verify.containsText('#appTitle', "Clinical UI - Crud Table")
       //========================================================================
-      // CUSTOMER LIST PAGE (NEW)
+      // MAJOREVENT LIST PAGE (NEW)
 
       .verify.elementPresent('#majorEventsListPage', "//----------------------------------------------------------")
-      .verify.elementPresent('#majorEventsListPage', "//CUSTOMER LIST PAGE (NEW)")
+      .verify.elementPresent('#majorEventsListPage', "//MAJOREVENT LIST PAGE (NEW)")
 
       .verify.elementPresent('#majorEventsTable')
       .verify.elementPresent('#majorEventsTableHeader')
@@ -53,13 +53,13 @@ module.exports = {
       .click('#newMajorEventLink')
 
       //========================================================================
-      // CUSTOMER UPSERT PAGE (NEW)
+      // MAJOREVENT UPSERT PAGE (NEW)
 
 
       .waitForElementVisible("#majorEventUpsertCard", 1000)
 
         .verify.elementPresent('#majorEventUpsertCard', "//----------------------------------------------------------")
-        .verify.elementPresent('#majorEventUpsertCard', "//CUSTOMER UPSERT PAGE (NEW)")
+        .verify.elementPresent('#majorEventUpsertCard', "//MAJOREVENT UPSERT PAGE (NEW)")
 
         .verify.elementPresent('#firstNameLabel')
         .verify.elementPresent('#lastNameLabel')
@@ -138,13 +138,13 @@ module.exports = {
 
 
       //========================================================================
-      // CUSTOMER PREVIEW PAGE
+      // MAJOREVENT PREVIEW PAGE
 
 
       .waitForElementVisible("#majorEventPreviewPage", 1000)
 
       .verify.elementPresent('#majorEventPreviewPage', "//----------------------------------------------------------")
-      .verify.elementPresent('#majorEventPreviewPage', "//CUSTOMER PREVIEW PAGE")
+      .verify.elementPresent('#majorEventPreviewPage', "//MAJOREVENT PREVIEW PAGE")
 
 
       // .verify.elementPresent('#firstNameLabel')
@@ -213,13 +213,13 @@ module.exports = {
 
 
     //========================================================================
-    // CUSTOMER UPSERT PAGE (EDIT)
+    // MAJOREVENT UPSERT PAGE (EDIT)
 
     .waitForElementVisible("#majorEventUpsertPage", 1000)
 
       .verify.elementPresent('#majorEventUpsertPage')
       .verify.elementPresent('#majorEventUpsertPage', "//----------------------------------------------------------")
-      .verify.elementPresent('#majorEventUpsertPage', "//CUSTOMER UPSERT PAGE (EDIT)")
+      .verify.elementPresent('#majorEventUpsertPage', "//MAJOREVENT UPSERT PAGE (EDIT)")
 
       .verify.containsText('#firstNameLabel', "First Name")
       .verify.containsText('#lastNameLabel', "Last Name")
@@ -297,12 +297,12 @@ module.exports = {
 
 
       //========================================================================
-      // CUSTOMER PREVIEW PAGE
+      // MAJOREVENT PREVIEW PAGE
 
 
       .waitForElementVisible("#majorEventPreviewPage", 1000)
       .verify.elementPresent('#majorEventPreviewPage', "//----------------------------------------------------------")
-      .verify.elementPresent('#majorEventPreviewPage', "//CUSTOMER PREVIEW PAGE")
+      .verify.elementPresent('#majorEventPreviewPage', "//MAJOREVENT PREVIEW PAGE")
 
       .verify.elementPresent('#firstNameText')
       .verify.elementPresent('#lastNameText')
@@ -337,10 +337,10 @@ module.exports = {
 
 
       //========================================================================
-      // CUSTOMER LIST PAGE (NEW)
+      // MAJOREVENT LIST PAGE (NEW)
 
       .verify.elementPresent('#majorEventsListPage', "//----------------------------------------------------------")
-      .verify.elementPresent('#majorEventsListPage', "//CUSTOMERS LIST PAGE")
+      .verify.elementPresent('#majorEventsListPage', "//MAJOREVENTS LIST PAGE")
 
       .verify.elementPresent('#majorEventsTable')
       .verify.elementPresent('#majorEventsTableHeaderRow')

@@ -1,6 +1,9 @@
 
 //--------------------------------------------------------------
 // Global Configuration
+
+
+/*Was originally this
 Router.configure({
   layoutTemplate: 'appLayout',
   yieldTemplates: {
@@ -8,14 +11,14 @@ Router.configure({
     'navbarFooter': {to: 'footer'}
   }
 });
-/*
+*/
 Router.configure({
   layoutTemplate: 'appLayout',
   yieldTemplates: {
     'navbarHeader': {to: 'header'}
   }
 });
-*/
+
 
 Router.map(function(){
   this.route('homeRoute', {

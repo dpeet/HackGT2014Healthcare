@@ -104,7 +104,7 @@ Template.majorEventUpsertPage.events({
         tags: $('#tagsInput').val(),
         hospitalId: $('#hospitalIdInput').val(),
         notes: $('#notesInput').val(),
-        drugs: $('#drugsInput').val(),
+        drugs: $('#drugsInput').val()
 
       };
 

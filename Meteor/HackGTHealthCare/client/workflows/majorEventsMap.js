@@ -1,8 +1,8 @@
 
 Router.map(function(){
-  this.route('majorEventPreviewPage', {
+  this.route('majorEventsMapPage', {
     path: '/majorEvent/:id',
-    template: 'majorEventPreviewPage',
+    template: 'majorEventsMapPage',
     waitOn: function(){
       return Meteor.subscribe('majorEvents');
     },
@@ -11,7 +11,7 @@ Router.map(function(){
     },
   });
 });
-Template.majorEventPreviewPage.events({
+Template.majorEventsMapPage.events({
   'click #majorEventEditButton':function(){
     Router.go('/editmajorEvent/' + this._id);
   },
@@ -22,6 +22,6 @@ Template.majorEventPreviewPage.events({
     }
   }
 });
-Template.majorEventPreviewPage.helpers({
+Template.majorEventsMapPage.helpers({
 
 });

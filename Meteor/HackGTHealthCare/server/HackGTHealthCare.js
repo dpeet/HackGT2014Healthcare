@@ -1,23 +1,11 @@
-if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault("counter", 0);
+Hospital = new Meteor.Collection("hospital");
+HospitalVisit = new Meteor.Collection("hospitalvisit");
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get("counter");
-    }
-  });
-
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set("counter", Session.get("counter") + 1);
-    }
-  });
-}
-
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
-}
+Meteor.startup(function () {
+	if (Hospital.find().count() === 0) {
+		var timestamp = new Date();
+		Hospital.insert({name: "Grady", streetaddress: "", city: "", state: "", zip: ""});
+		var h = Hospital.find().fetch();
+		HospitalVisit.insert({time: "", date: ""})
+	}
+});

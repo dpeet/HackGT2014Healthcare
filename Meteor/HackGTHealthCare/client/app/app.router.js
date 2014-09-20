@@ -1,12 +1,19 @@
 
 //--------------------------------------------------------------
 // Global Configuration
-
+/*Was originally this
 Router.configure({
   layoutTemplate: 'appLayout',
   yieldTemplates: {
     'navbarHeader': {to: 'header'},
     'navbarFooter': {to: 'footer'}
+  }
+});
+*/
+Router.configure({
+  layoutTemplate: 'appLayout',
+  yieldTemplates: {
+    'navbarHeader': {to: 'header'}
   }
 });
 

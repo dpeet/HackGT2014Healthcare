@@ -21,92 +21,57 @@ Router.map(function(){
 
 //-------------------------------------------------------------
 
-
 Template.majorEventUpsertPage.events({
-  'keyup #firstNameInput':function(){
+  'keyup #titleInput':function(){
     MajorEvents.update({_id: this._id}, {
       $set: {
-        'FirstName': $('#firstNameInput').val()
+        'title': $('#titleInput').val()
       }
     });
   },
-  'keyup #lastNameInput':function(){
+  'keyup #dateInput':function(){
     MajorEvents.update({_id: this._id}, {
       $set: {
-        'LastName': $('#lastNameInput').val()
+        'date': $('#dateInput').val()
       }
     });
   },
-  'keyup #companyInput':function(){
+  'keyup #timeInput':function(){
     MajorEvents.update({_id: this._id}, {
       $set: {
-        'Company': $('#companyInput').val()
+        'time': $('#timeInput').val()
       }
     });
   },
-  'keyup #addressInput':function(){
+  'keyup #tagsInput':function(){
     MajorEvents.update({_id: this._id}, {
       $set: {
-        'Address': $('#addressInput').val()
+        'tags': $('#tagsInput').val()
       }
     });
   },
-  'keyup #cityInput':function(){
+  'keyup #hospitalIdInput':function(){
     MajorEvents.update({_id: this._id}, {
       $set: {
-        'City': $('#cityInput').val()
+        'hospitalId': $('#hospitalIdInput').val()
       }
     });
   },
-  'keyup #countyInput':function(){
+  'keyup #notesInput':function(){
     MajorEvents.update({_id: this._id}, {
       $set: {
-        'County': $('#countyInput').val()
+        'notes': $('#notesInput').val()
       }
     });
   },
-  'keyup #stateInput':function(){
+  'keyup #drugsInput':function(){
     MajorEvents.update({_id: this._id}, {
       $set: {
-        'State': $('#stateInput').val()
+        'drugs': $('#drugsInput').val()
       }
     });
   },
-  'keyup #zipInput':function(){
-    MajorEvents.update({_id: this._id}, {
-      $set: {
-        'Zip': $('#zipInput').val()
-      }
-    });
-  },
-  'keyup #phoneInput':function(){
-    MajorEvents.update({_id: this._id}, {
-      $set: {
-        'Phone': $('#phoneInput').val()
-      }
-    });
-  },
-  'keyup #faxInput':function(){
-    MajorEvents.update({_id: this._id}, {
-      $set: {
-        'Fax': $('#faxInput').val()
-      }
-    });
-  },
-  'keyup #emailInput':function(){
-    MajorEvents.update({_id: this._id}, {
-      $set: {
-        'Email': $('#emailInput').val()
-      }
-    });
-  },
-  'keyup #webInput':function(){
-    MajorEvents.update({_id: this._id}, {
-      $set: {
-        'Web': $('#webInput').val()
-      }
-    });
-  },
+  '
   'click #previewMajorEventButton':function(){
     Router.go('/majorEvent/' + this._id);
   }
@@ -133,19 +98,14 @@ Template.majorEventUpsertPage.events({
       // TODO:  add validation functions
 
       var majorEventObject = {
-        FirstName: $('#firstNameInput').val(),
-        LastName: $('#lastNameInput').val(),
-        Company: $('#companyInput').val(),
-        Address: $('#addressInput').val(),
-        City: $('#cityInput').val(),
-        County: $('#countyInput').val(),
-        State: $('#stateInput').val(),
-        Zip: $('#zipInput').val(),
-        Phone: $('#phoneInput').val(),
-        Fax: $('#faxInput').val(),
-        Email: $('#emailInput').val(),
-        Web: $('#webInput').val(),
-        Notes: $('#notesInput').val()
+        title: $('#titleInput').val(),
+        date: $('#dateInput').val(),
+        time: $('#timeInput').val(),
+        tags: $('#tagsInput').val(),
+        hospitalId: $('#hospitalIdInput').val(),
+        notes: $('#notesInput').val(),
+        drugs: $('#drugsInput').val(),
+
       };
 
       if(this._id){

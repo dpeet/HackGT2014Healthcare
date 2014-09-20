@@ -1,13 +1,18 @@
 <template name="majorEventPreviewPage">
-  <div id="majorEventPreviewPage" class="fullheight padded">
+<script type="text/javascript"
+    src="http://maps.google.com/maps/api/js?v=3.13&key=AIzaSyCLXT2LChyPfyKwhqTOXZgTB-bLw_8ZPkY&sensor=false">
+</script>
+
+
+  <div id="majorEventsMapPage" class="fullheight padded">
     <div class="container">
       <div class="col col-md-offset-3 col-md-6">
 
       <!-- {{> majorEventCard }} -->
       
-<div id="majorEventPreviewCard" class="card panel panel-default">
+<div id="majorEventsMapCard" class="card panel panel-default">
         <div class="panel-heading">
-          <h2><span id="Tite">{{title}}</span></h2>
+          <h2><span id="Tite">{{title}}</span></h2> <!--TODO is the id here what is wrong? -->
           <p id="tagsText">{{ tags}}
           <h4 <span id="dateText">{{date}}</span><span id="timeText"> {{time}}</span></h4>
         </div>
@@ -22,11 +27,6 @@
 
           <h4 id="drugsText">{{Drugs}} </h4>
 
-        </div>
-        <div class="panel-footer">
-          <button id="majorEventEditButton" class="btn btn-warning">Edit MajorEvent</button>
-          <button id="majorEventDeleteButton" class="btn btn-danger">Delete MajorEvent</button>
-          <!-- <div>{{ _id }}</div> -->
         </div>
       </div>
 

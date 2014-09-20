@@ -16,24 +16,35 @@
         </div>
       <hr/>
 
+        title:   data[i].title,
+        date:  data[i].date,
+        time:  data[i].time,
+        tags:  data[i].tags,
+        hospitalId:  data[i].hospitalId,
+        otherLocation:  data[i].otherLocation,
+        notes:  data[i].notes,
+        drugs:  data[i].drugs,
+        createdAt: new Date()
+
+
       <table id="majorEventsTable" class="table table-hover table-striped tablesorter">
         <thead id="majorEventsTableHeader">
           <tr id="majorEventsTableHeaderRow">
-            <th id="firstNameColumn">First Name</th>
-            <th id="lastNameColumn">Last Name</th>
-            <th id="companyColumn">Company</th>
-            <th id="zipColumn">Zip</th>
-            <th id="emailColumn">Email</th>
+            <th id="titleColumn">Title</th>
+            <th id="dateColumn">Date</th>
+            <th id="timeColumn">Time</th>
+            <th id="tagsColumn">Tags</th>
+            <th id="locationColumn">location</th>
           </tr>
         </thead>
         <tbody>
           {{#each majorEventsList}}
             <tr class="majorEventRow">
-              <td>{{FirstName}}</td>
-              <td>{{LastName}}</td>
-              <td>{{Company}}</td>
-              <td>{{Zip}}</td>
-              <td>{{Email}}</td>
+              <td>{{title}}</td>
+              <td>{{date}}</td>
+              <td>{{time}}</td>
+              <td>{{tags}}</td>
+              <td>{{hospitalId}}</td>
             </tr>
           {{/each}}
         </tbody>

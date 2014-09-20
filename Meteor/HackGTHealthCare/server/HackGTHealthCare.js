@@ -1,6 +1,6 @@
 Hospital = new Meteor.Collection("hospital");
 MajorEvent = new Meteor.Collection("hospitalvisit");
-Drug = new Meteor.Collection("drugs");
+Drug = new Meteor.Collection("drug");
 DrugUsage = new Meteor.Collection("drugUsage");
 
 Meteor.startup(function () {

@@ -1,5 +1,7 @@
 Hospital = new Meteor.Collection("hospital");
 HospitalVisit = new Meteor.Collection("hospitalvisit");
+Drugs = new Meteor.Collection("drugs");
+DrugUsage = new Meteor.Collection("drugUsage");
 
 Template.hello.helpers({
   counter: function () {

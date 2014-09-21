@@ -25,9 +25,9 @@ Meteor.startup(function() {
 		
 		var h = Hospitals.find({name: "Grady"}).fetch();
 		
-		UserDrugs.insert({name: "Fentanyl", normalDosage: "100cc", sideEffects: "", personalEffect: "GOOD", personalEffectNotes: "extremely effective" });
-		UserDrugs.insert({name: "Propofol", normalDosage: "10cc/hr?", sideEffects: "", personalEffect: "GOOD", personalEffectNotes: "reacted well"});
-		UserDrugs.insert({name: "Ketamine", normalDosage: "??", sideEffects: "", personalEffect: "BAD", personalEffectNotes: "caused drug induced psychosis.  DO NOT TAKE"});
+		UserDrugs.insert({name: "Fentanyl", chemicalName: "", normalDosage: "100cc", sideEffects: "", personalEffect: "GOOD", notes: "extremely effective" });
+		UserDrugs.insert({name: "Propofol", chemicalName: "", normalDosage: "10cc/hr?", sideEffects: "", personalEffect: "GOOD", notes: "reacted well"});
+		UserDrugs.insert({name: "Ketamine", chemicalName: "", normalDosage: "??", sideEffects: "", personalEffect: "BAD", notes: "caused drug induced psychosis.  DO NOT TAKE"});
 		
 		var d = UserDrugs.find({name: "Fentanyl"}).fetch();
 

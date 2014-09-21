@@ -33,10 +33,9 @@ Template.map.rendered = function() {
                 var contentString = '<div id="content">'+
                   '<div id="siteNotice">'+
                   '</div>'+
-                  '<h1 id="firstHeading" class="firstHeading">'+h.name+'</h1>'+
+                  '<h3 id="firstHeading" class="firstHeading">'+h.name+'</h3>'+
                   '<div id="bodyContent">'+
-                  '<p>' + h.streetaddress + '</p>'+
-                  '<p>' + h.city + ', ' + h.state + ' ' + h.zip + '</p>'+
+                  '<p>' + h.streetaddress + '<br />' + h.city + ', ' + h.state + ' ' + h.zip + '</p>'+
                   '</div></div>';
                 var objMarker = {
                     id: h._id,

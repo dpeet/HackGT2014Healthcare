@@ -7,7 +7,7 @@ Router.map(function(){
       return Meteor.subscribe('hospital');
     },
     data: function () {
-      return Hospital.findOne({_id: this.params.id});
+      return Hospitals.findOne({_id: this.params.id});
     },
   });
 });
@@ -18,7 +18,7 @@ Template.hospitalPreviewPage.events({
   },
   'click #hospitalDeleteButton':function(){
     if(confirm('Are you sure you want to delete ' + this.name +  "?")){
-      Hospital.remove({_id: this._id});
+      Hospitals.remove({_id: this._id});
       Router.go('/hospitals');
     }
   }

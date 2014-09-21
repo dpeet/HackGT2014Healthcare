@@ -2,20 +2,18 @@
 
     <div id="login-buttons">
 
-    {{#if currentUser}}
+        {{#if currentUser}} Hi, {{currentUser.profile.name}}
+        <button id='logout-button' class='small'>Sign Out</button>
 
-      Hi, {{currentUser.profile.name}}
-      <button id='logout-button' class='small'>Sign Out</button>
-
-    {{else}}
-    <div class="container">
-      <div class="row">
-        <div class="col col-md-6 col-md-offset-3">
-          {{> loginButtons}}
-      </div>
-    </div>
-    </div>
-    {{/if}}
+        {{else}}
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-6 col-md-offset-3">
+                    {{> loginButtons}}
+                </div>
+            </div>
+        </div>
+        {{/if}}
 
     </div>
 

@@ -9,7 +9,7 @@ Router.map(function(){
     },
     data: function () {
       var h = Hospitals.findOne({_id: this.params.id});
-      h.tv = MajorEvents.find({hospitalId: h._id}).count;
+      h.tv = MajorEvents.find({hospitalId: h._id}).count();
       return h;
     },
   });

@@ -39,7 +39,7 @@ gmaps = {
             // animation: google.maps.Animation.DROP,
             icon:'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
         });
-        console.log("Added " + gMarker.title + "at " + gMarker.position);
+        console.log("Added " + gMarker.title + " at " + gMarker.position);
         this.latLngs.push(gLatLng);
         this.markers.push(gMarker);
         this.markerData.push(marker);

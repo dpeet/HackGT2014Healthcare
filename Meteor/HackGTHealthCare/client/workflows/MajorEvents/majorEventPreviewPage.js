@@ -14,7 +14,7 @@ Router.map(function(){
       e.drugArray = e.drugs.split(',');
       var tmpArr;
       for (var i = 0; i < e.drugArray.length; i++) {
-        tmpArr.push(UserDrugs.findOne({_id: e.drugArray[i]}));
+        tmpArr[i] = UserDrugs.findOne({_id: e.drugArray[i]});
       }
       e.drugArray = tmpArr;
       return e;

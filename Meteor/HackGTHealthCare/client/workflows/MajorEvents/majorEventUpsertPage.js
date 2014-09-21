@@ -81,6 +81,10 @@ Template.majorEventUpsertPage.events({
 
 //-------------------------------------------------------------
 
+Template.drugTemplate.drugs = function () {
+  return UserDrugs.find({});
+}
+
 Template.majorEventUpsertPage.helpers({
   getRecordId: function() {
     if(this._id) {

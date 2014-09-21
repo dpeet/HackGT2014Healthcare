@@ -27,8 +27,11 @@
                 <label id="notesLabel" for="notesInput">Notes</label>
                 <input id="notesInput"  class="form-control" type="text" placeholder="Event Notes" value="{{notes}}">
 
+                {{> drugTemplate}}
+                <!--
                 <label id="drugsLabel" for="drugsInput">Drugs</label>
                 <input id="drugsInput"  class="form-control" type="text" placeholder="Morphine, 100cc" value="{{drugs}}">
+                -->
               </form>
             </div>
             <div class="panel-footer">
@@ -37,5 +40,13 @@
           </div>
         </div>
       </div>
+  </div>
+</template>
+
+<template name="drugTemplate">
+  <div class="checkbox" id="drug-{{_id}}">
+    <label>
+      <input type="checkbox">{{name}}
+    </label>
   </div>
 </template>

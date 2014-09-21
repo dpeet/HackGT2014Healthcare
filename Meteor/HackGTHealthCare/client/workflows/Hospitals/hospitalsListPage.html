@@ -1,8 +1,52 @@
 <template name="hospitalsListPage">
   <div id="hospitalsListPage">
     <div class="container">
+      <div class="row">
         {{> map}}
-      {{> hospitalData}}
+      </div>
+      <div class="row">
+        <div class="col col-md-1">
+          <a class="btn btn-success" id="hospitalLink" href="/newHospital">New Hospital</a>
+        </div>
+        <div class="col col-md-6">
+          <input id="hospitalSearchInput" type="text" class="form-control" placeholder="search..." />
+        </div>
+        <div class="centered col col-md-5">
+          <div id="hospitalsListLimitButtons" class="pull-right btn-group">
+            <button id="twentyButton" class="{{isTwentyActive}} btn btn-default">20</button>
+            <button id="fiftyButton" class="{{isFiftyActive}} btn btn-default">50</button>
+            <button id="hundredButton" class="{{isHundredActive}} btn btn-default">100</button>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <table id="hospitalsTable" class="table table-hover table-striped tablesorter">
+        <thead id="hospitalsTableHeader">
+          <tr id="hospitalsTableHeaderRow">
+            <th id="nameColumn">Name</th>
+            <th id="addressColumn">Address</th>
+            <th id="latColumn">Latitude</th>
+            <th id="longColumn">Longitude</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each hospitalsList}}
+          <tr class="hospitalRow">
+            <td>{{name}}</td>
+            <td>{{streetaddress}} {{city}} {{state}} {{zip}}</td>
+            <td>{{lat}}</td>
+            <td>{{long}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      <hr />
+
+      <div id="hospitalsListPaginationButtons" class="btn-group">
+        {{#each paginationButtonHospitalsList }} {{> paginationButtonHospitals }} {{/each}}
+      </div>
     </div>
   </div>
 </template>
@@ -10,52 +54,6 @@
 <template name="map">
   <div id="map">
     <div id="map-canvas"></div>
-  </div>
-</template>
-
-<template name="hospitalData">
-  <div class="row">
-    <div class="col col-md-1">
-      <a class="btn btn-success" id="hospitalLink" href="/newHospital">New Hospital</a>
-    </div>
-    <div class="col col-md-6">
-      <input id="hospitalSearchInput" type="text" class="form-control" placeholder="search..." />
-    </div>
-    <div class="centered col col-md-5">
-      <div id="hospitalsListLimitButtons" class="pull-right btn-group">
-        <button id="twentyButton" class="{{isTwentyActive}} btn btn-default">20</button>
-        <button id="fiftyButton" class="{{isFiftyActive}} btn btn-default">50</button>
-        <button id="hundredButton" class="{{isHundredActive}} btn btn-default">100</button>
-      </div>
-    </div>
-  </div>
-
-  <hr />
-
-  <table id="hospitalsTable" class="table table-hover table-striped tablesorter">
-    <thead id="hospitalsTableHeader">
-      <tr id="hospitalsTableHeaderRow">
-        <th id="nameColumn">Name</th>
-        <th id="addressColumn">Address</th>
-        <th id="latColumn">Latitude</th>
-        <th id="longColumn">Longitude</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each hospitalsList}}
-      <tr class="hospitalRow">
-        <td>{{name}}</td>
-        <td>{{streetaddress}} {{city}} {{state}} {{zip}}</td>
-        <td>{{lat}}</td>
-        <td>{{long}}</td>
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>
-  <hr />
-
-  <div id="hospitalsListPaginationButtons" class="btn-group">
-    {{#each paginationButtonHospitalsList }} {{> paginationButtonHospitals }} {{/each}}
   </div>
 </template>
 

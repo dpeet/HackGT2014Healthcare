@@ -130,7 +130,7 @@ Template.hospitalsListPage.events({
 });
 
 
-Template.majorEventsListPage.helpers({
+Template.hospitalsListPage.helpers({
   getPaginationCount: function(){
     return Session.get('hospitalsPaginationCount');
   },

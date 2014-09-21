@@ -5,7 +5,7 @@
 Router.map(function(){
   this.route('loginPage', {
     path: '/login',
-    template: 'createAccountForm'
+    template: 'loginPage'
   });
 });
 

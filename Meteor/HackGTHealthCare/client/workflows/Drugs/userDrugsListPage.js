@@ -34,19 +34,6 @@ Router.map(function(){
 //------------------------------------------------
 // HELPERS
 
-data: function() {
-      var d = UserDrugs.findOne({
-        _id: this.params.id
-      });
-      if (d.personalEffect == "Good") {
-        d.label = "label-success";
-      }
-      else if (d.personalEffect == "Bad") {
-        d.label = "label-danger";
-      }
-      return d;
-    }
-
 Template.userDrugsListPage.helpers({
   userDrugsList: function(){
     var userDrugsCount = UserDrugs.find({$or:[

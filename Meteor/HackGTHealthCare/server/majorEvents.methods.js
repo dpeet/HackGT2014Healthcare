@@ -16,12 +16,15 @@ Meteor.methods({
       drugs:  data.drugs
     }});
   },
+  deleteAllMajorEvent: function(){
+    return MajorEvents.remove({});
+  },
   
-  createUserDrugsEvent: function(data){
+  createUserDrugs: function(data){
     data.createdAt = new Date();
     return UserDrugs.insert(data);
   },
-  updateUserDrugsEvent: function(data){
+  updateUserDrugs: function(data){
     data.createdAt = new Date();
     return UserDrugs.update({_id: data._id}, {$set:{
       name:   data.name,
@@ -32,6 +35,9 @@ Meteor.methods({
       notes:  data.notes
 
     }});
+  },
+  deleteAllUserDrugs: function(){
+    return UserDrugs.remove({});
   },
   
   createNewHospital: function(data){
@@ -49,5 +55,8 @@ Meteor.methods({
       lat:  data.lat,
       long:  data.long
     }});
+  },
+  deleteAllHospitals: function(){
+    return Hospitals.remove({});
   }
 });

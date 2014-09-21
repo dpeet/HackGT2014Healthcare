@@ -30,3 +30,4 @@ DONE
 * Check logic for inputting hospitals, to make sure everything [still] works (specifically tags and drugs on majorevent - they got restructured)
 
 http://twbscolor.smarchal.com/scss?bd=6aa7ff&bh=386ab2&cd=ecf0f1&ch=dbdcff
+http://www.blumcenterforhealth.com/images/blum_center_for_health_intake_form.pdf

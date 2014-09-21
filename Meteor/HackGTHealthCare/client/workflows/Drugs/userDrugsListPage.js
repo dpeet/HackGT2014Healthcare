@@ -15,6 +15,19 @@ Router.map(function(){
     template: 'userDrugsListPage',
     waitOn: function(){
       return Meteor.subscribe('userDrugs');
+      
+    data: function() {
+      var d = UserDrugs.findOne({
+        _id: this.params.id
+      });
+      if (d.personalEffect == "Good") {
+        d.label = "label-success";
+      }
+      else if (d.personalEffect == "Bad") {
+        d.label = "label-danger";
+      }
+      return d;
+    }
     }
   });
 });

@@ -12,7 +12,7 @@ Router.map(function(){
       var e = MajorEvents.findOne({_id: this.params.id});
       e.hospitalName = Hospitals.findOne({_id: e.hospitalId});
       e.drugArray = e.drugs.split(',');
-      var tmpArr;
+      var tmpArr = new Array();
       for (var i = 0; i < e.drugArray.length; i++) {
         tmpArr[i] = UserDrugs.findOne({_id: e.drugArray[i]});
       }

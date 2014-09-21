@@ -33,3 +33,13 @@ Licensing
 ------------------------
 
 MIT License. Use as you wish, including for commercial purposes.
+
+
+TODO
+------------------------
+* Rewrite this readme so its not this other persons thing
+
+
+Futre Work
+------------------------
+* Rewrite db calls with proper joins instead of hacking it up (some list pages, detail pages)

@@ -56,8 +56,10 @@ Template.majorEventsListPage.helpers({
     },{limit: Session.get('majorEventsTableLimit'), skip: Session.get('majorEventsSkipCount')});
     
     for (var i = 0; i < e.count(); i++) {
+      console.log(e.hospitalId + " - " + e.hospitalName);
       e.hospitalName = Hospitals.findOne({_id:e.hospitalId}).name;
     }
+    
     return e;
   },
   rendered: function(){

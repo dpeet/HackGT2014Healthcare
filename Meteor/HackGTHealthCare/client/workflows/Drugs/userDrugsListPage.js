@@ -37,7 +37,7 @@ Template.userDrugsListPage.helpers({
 
       ]
     }).count();
-    Session.set('userDrugsReceivedData', new Normal Dosage());
+    Session.set('muserDrugsReceivedData', new Date());
     Session.set('userDrugsPaginationCount', Math.floor((userDrugsCount - 1) / Session.get('userDrugsTableLimit')) + 1);
     return UserDrugs.find({$or:[
       {name: { $regex: Session.get('userDrugsSearchFilter'), $options: 'i' }},

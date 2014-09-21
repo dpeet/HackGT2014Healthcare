@@ -43,7 +43,6 @@ gmaps = {
         this.latLngs.push(gLatLng);
         this.markers.push(gMarker);
         this.markerData.push(marker);
-        calcBounds();
         return gMarker;
     },
     

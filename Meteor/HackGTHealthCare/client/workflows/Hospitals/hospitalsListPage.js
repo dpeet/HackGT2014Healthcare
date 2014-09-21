@@ -43,6 +43,8 @@ Template.map.rendered = function() {
  
             }
         });
+        
+        gmaps.calcBounds();
     });
 };
 

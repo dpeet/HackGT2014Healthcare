@@ -22,59 +22,46 @@ Router.map(function(){
 //-------------------------------------------------------------
 
 Template.userDrugUpsertPage.events({
+  
   'keyup #nameInput':function(){
-    UserDrugs.upnormalDosage({_id: this._id}, {
+    UserDrugs.update({_id: this._id}, {
       $set: {
         'name': $('#nameInput').val()
       }
     });
   },
    'keyup #chemicalNameInput':function(){
-    UserDrugs.upchemicalName({_id: this._id}, {
+    UserDrugs.update({_id: this._id}, {
       $set: {
         'chemicalName': $('#chemicalNameInput').val()
       }
     });
   },
   'keyup #normalDosageInput':function(){
-    UserDrugs.upnormalDosage({_id: this._id}, {
+    UserDrugs.update({_id: this._id}, {
       $set: {
         'normalDosage': $('#normalDosageInput').val()
       }
     });
   },
   'keyup #sideEffectsInput':function(){
-    UserDrugs.upnormalDosage({_id: this._id}, {
+    UserDrugs.update({_id: this._id}, {
       $set: {
         'sideEffects': $('#sideEffectsInput').val()
       }
     });
   },
   'keyup #personalEffectInput':function(){
-    UserDrugs.upnormalDosage({_id: this._id}, {
+    UserDrugs.update({_id: this._id}, {
       $set: {
         'personalEffect': $('#personalEffectInput').val()
       }
     });
   },
-  'keyup #hospitalIdInput':function(){
-    UserDrugs.upnormalDosage({_id: this._id}, {
-      $set: {
-        'hospitalId': $('#hospitalIdInput').val()
-      }
-    });
-  },
   'keyup #notesInput':function(){
-    UserDrugs.upnormalDosage({_id: this._id}, {
+    UserDrugs.update({_id: this._id}, {
       $set: {
         'notes': $('#notesInput').val()
-      }
-    });
-  },
-  'keyup #drugsInput':function(){
-    UserDrugs.upnormalDosage({_id: this._id}, {
-      $set: {
-        'drugs': $('#drugsInput').val()
       }
     });
   },

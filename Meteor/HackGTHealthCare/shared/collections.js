@@ -1,6 +1,6 @@
 UserDrugs = new Meteor.Collection("userDrugs");
 DrugUsage = new Meteor.Collection("drugUsage");
-Hospital = new Meteor.Collection("hospital");
+Hospitals = new Meteor.Collection("hospital");
 MajorEvents = new Meteor.Collection("majorEvents");
 
 UserDrugs.allow({

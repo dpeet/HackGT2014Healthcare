@@ -11,7 +11,7 @@ Router.map(function(){
     path: '/editHospital/:id',
     template: 'hospitalUpsertPage',
     waitOn: function(){
-      return Meteor.subscribe('hospitals');
+      return Meteor.subscribe('hospital');
     },
     data: function(){
       return Hospitals.findOne(this.params.id);
@@ -22,52 +22,45 @@ Router.map(function(){
 //-------------------------------------------------------------
 
 Template.hospitalUpsertPage.events({
-  'keyup #titleInput':function(){
+  'keyup #nameInput':function(){
     Hospitals.update({_id: this._id}, {
       $set: {
-        'title': $('#titleInput').val()
+        'name': $('#nameInput').val()
       }
     });
   },
-  'keyup #dateInput':function(){
+  'keyup #streetaddressInput':function(){
     Hospitals.update({_id: this._id}, {
       $set: {
-        'date': $('#dateInput').val()
+        'streetaddress': $('#streetaddressInput').val()
       }
     });
   },
-  'keyup #timeInput':function(){
+  'keyup #cityInput':function(){
     Hospitals.update({_id: this._id}, {
       $set: {
-        'time': $('#timeInput').val()
+        'city': $('#cityInput').val()
       }
     });
   },
-  'keyup #tagsInput':function(){
+  'keyup #stateInput':function(){
     Hospitals.update({_id: this._id}, {
       $set: {
-        'tags': $('#tagsInput').val()
+        'state': $('#stateInput').val()
       }
     });
   },
-  'keyup #hospitalIdInput':function(){
+  'keyup #latInput':function(){
     Hospitals.update({_id: this._id}, {
       $set: {
-        'hospitalId': $('#hospitalIdInput').val()
+        'lat': $('#latInput').val()
       }
     });
   },
-  'keyup #notesInput':function(){
+  'keyup #longInput':function(){
     Hospitals.update({_id: this._id}, {
       $set: {
-        'notes': $('#notesInput').val()
-      }
-    });
-  },
-  'keyup #drugsInput':function(){
-    Hospitals.update({_id: this._id}, {
-      $set: {
-        'drugs': $('#drugsInput').val()
+        'long': $('#longInput').val()
       }
     });
   },
@@ -132,6 +125,6 @@ Template.hospitalUpsertPage.events({
     Hospitals.remove(Session.get('selected_user'));
   },
   'click #cancelDeleteButton': function() {
-    Router.go('/hospital');
+    Router.go('/hospitals');
   }
 });

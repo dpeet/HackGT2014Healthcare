@@ -1,6 +1,6 @@
 Meteor.startup(function() {
   /* TODO remove this bit */
-  Hospital.remove({});
+  Hospitals.remove({});
   MajorEvents.remove({});
   UserDrugs.remove({});
   DrugUsage.remove({});
@@ -11,7 +11,7 @@ Meteor.startup(function() {
     
     var timestamp = new Date();
 		
-		Hospital.insert({
+		Hospitals.insert({
 		  name: "Grady", 
 		  streetaddress: "80 Jesse Hill Jr Dr SE", 
 		  city: "Atlanta", 
@@ -20,10 +20,10 @@ Meteor.startup(function() {
 		  lat: 33.752062, 
 		  long: -84.382198});
 		  
-		Hospital.insert({name: "Duluth Medical", streetaddress: "3620 Howell Ferry Rd", city: "Duluth", state: "GA", zip: 30096, lat: 34.001413, long: -84.163569});
-		Hospital.insert({name: "Sutter Medical Center", streetaddress: "3325 Chanate Rd", city: "Santa Rosa", state: "CA", zip: 95404, lat: 38.469572, long: -122.707625});
+		Hospitals.insert({name: "Duluth Medical", streetaddress: "3620 Howell Ferry Rd", city: "Duluth", state: "GA", zip: 30096, lat: 34.001413, long: -84.163569});
+		Hospitals.insert({name: "Sutter Medical Center", streetaddress: "3325 Chanate Rd", city: "Santa Rosa", state: "CA", zip: 95404, lat: 38.469572, long: -122.707625});
 		
-		var h = Hospital.find({name: "Grady"}).fetch();
+		var h = Hospitals.find({name: "Grady"}).fetch();
 		
 		UserDrugs.insert({name: "Fentanyl", normalDosage: "100cc", sideEffects: "", personalEffect: "GOOD", personalEffectNotes: "extremely effective" });
 		UserDrugs.insert({name: "Propofol", normalDosage: "10cc/hr?", sideEffects: "", personalEffect: "GOOD", personalEffectNotes: "reacted well"});

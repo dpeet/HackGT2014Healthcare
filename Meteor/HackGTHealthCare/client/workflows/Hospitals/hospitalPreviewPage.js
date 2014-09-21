@@ -19,7 +19,7 @@ Template.hospitalPreviewPage.events({
   'click #hospitalDeleteButton':function(){
     if(confirm('Are you sure you want to delete ' + this.name +  "?")){
       Hospital.remove({_id: this._id});
-      Router.go('/hospital');
+      Router.go('/hospitals');
     }
   }
 });

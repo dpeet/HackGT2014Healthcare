@@ -97,7 +97,7 @@ Template.userDrugsListPage.helpers({
   getPaginationCount: function(){
     return Session.get('userDrugsPaginationCount');
   },
-  paginationButtonList: function(){
+  paginationButtonDrugsList: function(){
     var paginationArray = [];
     for (var i = 0; i < Session.get('userDrugsPaginationCount'); i++) {
       paginationArray[i] = {
@@ -129,7 +129,7 @@ Template.userDrugsListPage.helpers({
 
 
 
-Template.paginationButton.helpers({
+Template.paginationButtonDrugs.helpers({
   pageActive: function(){
     if(this.index === Session.get('userDrugsSelectedPagination')){
       return "active";

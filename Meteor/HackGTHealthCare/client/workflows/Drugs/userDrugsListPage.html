@@ -42,13 +42,13 @@
       </table>
       <hr>
 
-      <div id="userDrugsListPaginationButtons" class="btn-group">
-        {{#each paginationButtonList }} {{> paginationButton }} {{/each}}
+      <div id="userDrugsListPaginationButtonDrugssDrugs" class="btn-group">
+        {{#each paginationButtonDrugsList }} {{> paginationButtonDrugs }} {{/each}}
       </div>
     </div>
   </div>
 </template>
 
-<template name="paginationButton">
+<template name="paginationButtonDrugs">
   <button id="pagination-btn-{{index}}" class="{{pageActive}} pagination-btn btn btn-default">{{getPage}}</button>
 </template>

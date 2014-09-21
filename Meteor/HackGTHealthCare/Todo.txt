@@ -1,7 +1,6 @@
 TODO / Low Hanging Fruit
 ------------------------
 * Currently events list "Hospital Details" link routes through the MajorEvent Details page. Preferably it would ignore the majordetails if you click on the link
-* We should be able to generate a list of major events by tag
 * Go through adding each type, make sure initial data is formatted the same as inputted data
 * Picklist of states for input
 * Picklist of hospitals when adding majorevent
@@ -16,6 +15,7 @@ TODO / Low Hanging Fruit
 Future Work / Stretch Goals
 ------------------------
 * Set up accounts
+* We should be able to generate a list of major events by tag
 * Suggest tags based on current tags
 * Ensure Meteor.Accounts is added as a dependency in the repo (might need to push changes from dev's local copy)
 * Logic around city/state/zip input, since you shouldn't have to put in all of them
@@ -31,3 +31,5 @@ DONE
 
 http://twbscolor.smarchal.com/scss?bd=6aa7ff&bh=386ab2&cd=ecf0f1&ch=dbdcff
 http://www.blumcenterforhealth.com/images/blum_center_for_health_intake_form.pdf
+https://github.com/kenyee/meteor-accounts-admin-ui
+https://github.com/awatson1978/clinical-ui-crud-table

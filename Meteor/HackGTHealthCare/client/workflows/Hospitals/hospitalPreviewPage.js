@@ -10,6 +10,7 @@ Router.map(function(){
     data: function () {
       var h = Hospitals.findOne({_id: this.params.id});
       h.tv = MajorEvents.find({hospitalId: h._id}).count();
+      h.hospitalEvent = MajorEvents.find({_id: h._id}).fetch();
       return h;
     },
   });

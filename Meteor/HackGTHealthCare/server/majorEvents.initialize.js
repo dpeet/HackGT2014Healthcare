@@ -52,8 +52,8 @@ Meteor.startup(function() {
 
     var data = [{
         "title": "Motorcycle Accident - Grady",
-        "date": "3/3/2014",
-        "time": "1 pm",
+        "date": "2014-03-03",
+        "time": "11:00",
         "tags": [{tag:"Shoulder"}, {tag:"Motorcycle"}],
         "hospitalId": h1[0]._id,
         "otherLocation": "",
@@ -61,8 +61,8 @@ Meteor.startup(function() {
         "drugs": [d1[0]._id, d2[0]._id]
       },
 
-      {"title": "Hockey Dislocation - Grady","date": "5/3/2014","time": "5 pm","tags": [{tag:"Shoulder"},{tag:"Motorcycle"},{tag:"Hockey"}],"hospitalId": h2[0]._id,"otherLocation": "","notes": "They put your shoulder back in at Gwinnett Medical Center - Duluth ER.","drugs": [d1[0]._id,d2[0]._id]},
-      {"title": "Midnight Dislocation - Santa Rosa","date": "8/30/2014","time": "1:00","tags": [{tag:"Shoulder"},{tag:"Motorcycle"},{tag:"SleepReach"}],"hospitalId": h3[0]._id,"otherLocation": "","notes": "In the Grady trauma ER they performed the reduction on my right shoulder back in.  Afterwards both my left and right shoulders would sublux","drugs": [d1[0]._id,d3[0]._id]},
+      {"title": "Hockey Dislocation - Duluth Med","date": "2014-05-03","time": "17:00","tags": [{tag:"Shoulder"},{tag:"Motorcycle"},{tag:"Hockey"}],"hospitalId": h2[0]._id,"otherLocation": "","notes": "They put your shoulder back in at Gwinnett Medical Center - Duluth ER.","drugs": [d1[0]._id,d2[0]._id]},
+      {"title": "Midnight Dislocation - Santa Rosa","date": "2014-08-29","time": "1:00","tags": [{tag:"Shoulder"},{tag:"Motorcycle"},{tag:"SleepReach"}],"hospitalId": h3[0]._id,"otherLocation": "","notes": "In the Grady trauma ER they performed the reduction on my right shoulder back in.  Afterwards both my left and right shoulders would sublux","drugs": [d1[0]._id,d3[0]._id]},
       {"title": "GaTech Blood Donation","date": "2014-06-31","time": "15:00","tags": [{tag:"BloodDonation"}],"hospitalId": h4[0]._id,"otherLocation": "","notes": "Donated blood for the first time! They even gave us cookies and snacks to recover our strength","drugs": [d4[0]._id,d5[0]._id]}
     ];
 

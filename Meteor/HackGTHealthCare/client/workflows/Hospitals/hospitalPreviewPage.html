@@ -14,6 +14,28 @@
           <div class="panel-body">
             <h4>Address</h4>
             <p>{{streetaddress}}<br />{{city}}, {{state}} {{zip}}</p>
+            
+            <hr>
+
+            <h4>Events at this hospital</h4>
+            <table id="hospitalEventsTable" class="table table-hover table-striped tablesorter">
+              <thead id="hospitalEventsTableHeader">
+                <tr id="hospitalEventsTableHeaderRow">
+                  <th id="dateColumn">Date</th>
+                  <th id="titleColumn">Title</th>
+                  <th id="linkColumn">Details Link</th>
+                </tr>
+              </thead>
+              <tbody id="hospitalEventsTableBody">
+                {{#each hospitalEvent}}
+                <tr>
+                  <td id="eventName-{{_id}}">{{date}}</td>
+                  <td id="eventTitle-{{_id}}">{{title}}</td>
+                  <td id="eventLink-{{_id}}"><a href="/majorEvent/"{{_id}}>Event Details</a></td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
           </div>
           <div class="panel-footer">
             <button id="hospitalEditButton" class="btn btn-warning">Edit Hospital</button>

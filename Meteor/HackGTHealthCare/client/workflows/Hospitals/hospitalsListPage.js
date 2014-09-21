@@ -62,29 +62,24 @@ Template.hospitalsListPage.helpers({
   hospitalsList: function(){
     var hospitalsCount = Hospitals.find({$or:[
       {name: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
+      {streetaddress: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
       {city: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
-      {state: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }} /*,
-      {tags: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
-      {hospitalId: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
-      {otherLocation: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
-      {notes: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
-      {drugs: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
-      {createdAt: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }} */
-
+      {state: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
+      {zip: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
+      {lat: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
+      {long: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }}
       ]
     }).count();
     Session.set('hospitalsReceivedData', new Date());
     Session.set('hospitalsPaginationCount', Math.floor((hospitalsCount - 1) / Session.get('hospitalsTableLimit')) + 1);
     return Hospitals.find({$or:[
       {name: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
+      {streetaddress: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
       {city: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
-      {state: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }} /*,
-      {tags: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
-      {hospitalId: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
-      {otherLocation: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
-      {notes: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
-      {drugs: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
-      {createdAt: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }} */
+      {state: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
+      {zip: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
+      {lat: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
+      {long: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }}
       ]
     },{limit: Session.get('hospitalsTableLimit'), skip: Session.get('hospitalsSkipCount')});
   },

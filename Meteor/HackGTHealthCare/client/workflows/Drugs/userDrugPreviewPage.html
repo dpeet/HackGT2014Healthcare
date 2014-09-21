@@ -8,17 +8,23 @@
 <div id="majorEventPreviewCard" class="card panel panel-default">
         <div class="panel-heading">
           <h2 id="name">{{name}}</h2>
-          <p id="chemicalName">{{chemicalName}}</p>
-          <h4 id="normalDosage">{{normalDosage}}</h4>
+          <h4 id="normalDosage">Dosage: {{normalDosage}}</h4>
+          <p id="chemicalName">Chemical Name: {{chemicalName}}</p>
         </div>
         <div class="panel-body">
+
+          <h4 id="sideEffects">Side Effects</h4>
+          <p>{{sideEffects}}</p>
           
-          <hr>
-
-          <h4 id="sideEffects">{{sideEffects}} </h4>
-          <h4 id="personalEffect">{{personalEffect}} </h4>
-          <h4 id="notes">{{notes}} </h4>
-
+          <hr />
+          
+          <h4 id="personalEffect">Personal Effect</h4>
+          <div class="label label-md {{label}}">{{personalEffect}}</div>
+          
+          <hr />
+          
+          <h4 id="notes">Notes</h4>
+          <p>{{notes}}</p>
 
         </div>
           <div class="panel-footer">

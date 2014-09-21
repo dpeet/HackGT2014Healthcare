@@ -26,19 +26,17 @@
 </template>
 
 <template name="hospitalData">
-  <div class="row">
-    <div class="col col-md-1">
-      <a class="btn btn-success" id="hospitalLink" href="/newHospital">New Hospital</a>
-    </div>
-    <div class="col col-md-6">
-      <input id="hospitalSearchInput" type="text" class="form-control" placeholder="search..." />
-    </div>
-    <div class="centered col col-md-5">
-      <div id="hospitalsListLimitButtons" class="pull-right btn-group">
-        <button id="twentyButton" class="{{isTwentyActive}} btn btn-default">20</button>
-        <button id="fiftyButton" class="{{isFiftyActive}} btn btn-default">50</button>
-        <button id="hundredButton" class="{{isHundredActive}} btn btn-default">100</button>
-      </div>
+  <div class="col col-md-1">
+    <a class="btn btn-success" id="hospitalLink" href="/newHospital">New Hospital</a>
+  </div>
+  <div class="col col-md-6">
+    <input id="hospitalSearchInput" type="text" class="form-control" placeholder="search..." />
+  </div>
+  <div class="centered col col-md-5">
+    <div id="hospitalsListLimitButtons" class="pull-right btn-group">
+      <button id="twentyButton" class="{{isTwentyActive}} btn btn-default">20</button>
+      <button id="fiftyButton" class="{{isFiftyActive}} btn btn-default">50</button>
+      <button id="hundredButton" class="{{isHundredActive}} btn btn-default">100</button>
     </div>
   </div>
   <hr/>

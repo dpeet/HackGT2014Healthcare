@@ -15,6 +15,7 @@ Router.map(function(){
     template: 'majorEventsListPage',
     waitOn: function(){
       return Meteor.subscribe('majorEvents');
+      return Meteor.subscribe('hospitals');
     }
   });
 });
@@ -41,7 +42,7 @@ Template.majorEventsListPage.helpers({
     }).count();
     Session.set('majorEventsReceivedData', new Date());
     Session.set('majorEventsPaginationCount', Math.floor((majorEventsCount - 1) / Session.get('majorEventsTableLimit')) + 1);
-    return MajorEvents.find({$or:[
+    var e = MajorEvents.find({$or:[
       {title: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
       {date: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
       {time: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }},
@@ -53,6 +54,11 @@ Template.majorEventsListPage.helpers({
       {createdAt: { $regex: Session.get('majorEventsSearchFilter'), $options: 'i' }}
       ]
     },{limit: Session.get('majorEventsTableLimit'), skip: Session.get('majorEventsSkipCount')});
+    
+    for (var i = 0; i < e.count(); i++) {
+      e.hospitalName = Hospitals.findOne({_id:e.hospitalId}).name;
+    }
+    return e;
   },
   rendered: function(){
     $(this.find('#majorEventsTable')).tablesorter();

@@ -35,8 +35,8 @@
             <td>{{title}}</td>
             <td>{{date}}</td>
             <td>{{time}}</td>
-            <td>{{tags}}</td>
-            <td>{{hospitalId}}</td>
+            <td>{{#each tags}}<span class="label label-default label-sm">{{tag}}</span>&nbsp;{{/each}}</td>
+            <td>{{hospitalName}}</td>
           </tr>
           {{/each}}
         </tbody>

@@ -10,7 +10,7 @@ Router.map(function(){
 });
 
 
-Template.login.rendered = function()
+Template.loginPage.rendered = function()
 {
     Accounts._loginButtonsSession.set('dropdownVisible', true);
 };

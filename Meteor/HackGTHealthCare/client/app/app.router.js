@@ -23,7 +23,7 @@ Router.configure({
 Router.map(function(){
   this.route('homeRoute', {
     path: '/',
-    template: "majorEventsListPage",
+    template: "loginPage",
     waitOn: function(){
       return Meteor.subscribe('majorEvents');
     }

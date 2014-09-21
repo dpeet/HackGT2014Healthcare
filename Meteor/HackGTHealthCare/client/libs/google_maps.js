@@ -52,7 +52,7 @@ gmaps = {
         var mapOptions = {
             zoom: 12,
             center: new google.maps.LatLng(53.565, 10.001),
-            mapTypeId: google.maps.MapTypeId.HYBRID
+            mapTypeId: google.maps.MapTypeId.ROADMAP
         };
  
         this.map = new google.maps.Map(

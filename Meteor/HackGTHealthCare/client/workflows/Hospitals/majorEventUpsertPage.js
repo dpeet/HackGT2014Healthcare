@@ -1,14 +1,14 @@
 
 Router.map(function(){
-  this.route('majorEventUpsertPage', {
-    path: '/newmajorEvent',
-    template: 'majorEventUpsertPage',
+  this.route('hospitalUpsertPage', {
+    path: '/newHospital',
+    template: 'hospitalUpsertPage',
     waitOn: function(){
-      return Meteor.subscribe('majorEvents');
+      return Meteor.subscribe('hospital');
     }
   });
-  this.route('majorEventUpsertPage', {
-    path: '/editmajorEvent/:id',
+  this.route('hospitalUpsertPage', {
+    path: '/editHospital/:id',
     template: 'majorEventUpsertPage',
     waitOn: function(){
       return Meteor.subscribe('majorEvents');

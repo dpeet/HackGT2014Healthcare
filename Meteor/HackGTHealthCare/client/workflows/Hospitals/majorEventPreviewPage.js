@@ -1,28 +1,28 @@
 
 Router.map(function(){
-  this.route('majorEventPreviewPage', {
-    path: '/majorEvent/:id',
-    template: 'majorEventPreviewPage',
+  this.route('hospitalPreviewPage', {
+    path: '/hospital/:id',
+    template: 'hospitalPreviewPage',
     waitOn: function(){
-      return Meteor.subscribe('majorEvents');
+      return Meteor.subscribe('hospital');
     },
     data: function () {
-      return MajorEvents.findOne({_id: this.params.id});
+      return Hospital.findOne({_id: this.params.id});
     },
   });
 });
 
-Template.majorEventPreviewPage.events({
-  'click #majorEventEditButton':function(){
-    Router.go('/editmajorEvent/' + this._id);
+Template.hospitalPreviewPage.events({
+  'click #hospitalEditButton':function(){
+    Router.go('/editHospital/' + this._id);
   },
-  'click #majorEventDeleteButton':function(){
-    if(confirm('Are you sure you want to delete ' + this.title +  "?")){
-      MajorEvents.remove({_id: this._id});
-      Router.go('/');
+  'click #hospitalDeleteButton':function(){
+    if(confirm('Are you sure you want to delete ' + this.name +  "?")){
+      Hospital.remove({_id: this._id});
+      Router.go('/hospital');
     }
   }
 });
-Template.majorEventPreviewPage.helpers({
+Template.hospitalPreviewPage.helpers({
 
 });

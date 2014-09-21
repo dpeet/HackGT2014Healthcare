@@ -1,14 +1,14 @@
 
-<template name="majorEventUpsertPage">
-  <div id="majorEventUpsertPage">
+<template name="hospitalUpsertPage">
+  <div id="hospitalUpsertPage">
       <div class="container">
         <div class="col col-md-offset-3 col-md-6">
-          <div id="majorEventUpsertCard" class="panel panel-default">
+          <div id="hospitalUpsertCard" class="panel panel-default">
             <div class="panel-heading">
               {{ getRecordId }}
             </div>
             <div class="panel-body">
-              <form id="majorEventForm" class="meteor-form">
+              <form id="hospitalForm" class="meteor-form">
                 <label id="titleLabel" for="titleInput">Title</label>
                 <input id="titleInput" class="form-control" type="text" placeholder="Hospital Visit" value="{{title}}">
 
@@ -32,7 +32,7 @@
               </form>
             </div>
             <div class="panel-footer">
-              <button id="upsertMajorEventButton" type="button" class="fullwidth btn btn-info" width="100%">Save MajorEvent</button>
+              <button id="upsertHospitalButton" type="button" class="fullwidth btn btn-info" width="100%">Save Hospital</button>
             </div>
           </div>
         </div>

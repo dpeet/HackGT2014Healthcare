@@ -11,7 +11,7 @@ Session.setDefault('hospitalsSkipCount', 0);
 
 Router.map(function(){
   this.route('hospitalPage', {
-    path: '/hospitals',
+    path: '/hospital',
     template: 'hospitalPage',
     waitOn: function(){
       return Meteor.subscribe('hospital');

@@ -1,0 +1,35 @@
+<template name="hospitalPreviewPage">
+  <div id="hospitalPreviewPage" class="fullheight padded">
+    <div class="container">
+      <div class="col col-md-offset-3 col-md-6">
+
+        <!-- {{> majorEventCard }} -->
+
+        <div id="hospitalPreviewCard" class="card panel panel-default">
+          <div class="panel-heading">
+            <h2><span id="title">{{title}}</span></h2>
+            <p id="tagsText">{{tags}}</p>
+            <h4><span id="dateText">{{date}}</span><span id="timeText"> {{time}}</span></h4>
+          </div>
+          <div class="panel-body">
+            <h4 id="hospitalIdText">{{hospitalId}}</h4>
+
+            <hr>
+
+            <h4 id="notesText">{{notes}} </h4>
+
+            <hr>
+
+            <h4 id="drugsText">{{drugs}} </h4>
+
+          </div>
+          <div class="panel-footer">
+            <button id="hospitalEditButton" class="btn btn-warning">Edit Hospital</button>
+            <button id="hospitalDeleteButton" class="btn btn-danger">Delete Hospital</button>
+            <!-- <div>{{ _id }}</div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

@@ -55,7 +55,7 @@ Template.majorEventsListPage.helpers({
       ]
     },{limit: Session.get('majorEventsTableLimit'), skip: Session.get('majorEventsSkipCount')});
     
-    if (e) {
+    if ((typeof(e) !== 'undefined') && (e !== null)) {
       for (var i = 0; i < e.count(); i++) {
         console.log(e.hospitalId + " - " + e.hospitalName);
         e.hospitalName = Hospitals.findOne({_id:e.hospitalId}).name;

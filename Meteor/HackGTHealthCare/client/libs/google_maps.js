@@ -49,6 +49,7 @@ gmaps = {
         });
         google.maps.event.addListener(gMarker, 'click', function() {
             this.map.panTo(gMarker.getPosition());
+            console.log("Opening Window " + gMarker.title + "at " + gMarker.getPosition());
             infowindow.open(this.map, gMarker);
         });
 

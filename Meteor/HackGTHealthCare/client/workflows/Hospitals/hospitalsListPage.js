@@ -35,7 +35,7 @@ Template.map.rendered = function() {
                   '</div>'+
                   '<h1 id="firstHeading" class="firstHeading">'+h.name+'</h1>'+
                   '<div id="bodyContent">'+
-                  '<p>' + h.streetaddress + '</p><br />'+
+                  '<p>' + h.streetaddress + '</p>'+
                   '<p>' + h.city + ', ' + h.state + ' ' + h.zip + '</p>'+
                   '</div></div>';
                 var objMarker = {

@@ -1,0 +1,39 @@
+
+<template name="userDrugUpsertPage">
+  <div id="userDrugUpsertPage">
+      <div class="container">
+        <div class="col col-md-offset-3 col-md-6">
+          <div id="userDrugUpsertCard" class="panel panel-default">
+            <div class="panel-heading">
+              {{ getRecordId }}
+            </div>
+            <div class="panel-body">
+              <form id="userDrugForm" class="meteor-form">
+                <label id="nameLabel" for="nameInput">Name</label>
+                <input id="nameInput" class="form-control" type="text" placeholder="Vicodin" value="{{name}}">
+                
+                 <label id="chemicalNameLabel" for="chemicalNameInput">Chemical Name</label>
+                <input id="chemicalNameeInput"  class="form-control" type="text" placeholder="100 mg" value="{{chemicalName}}">
+
+                <label id="normalDosageLabel" for="normalDosageInput">Normal Dosage</label>
+                <input id="normalDosageInput"  class="form-control" type="text" placeholder="100 mg" value="{{normalDosage}}">
+
+                <label id="sideEffectsLabel" for="sideEffectsInput">Side Effects</label>
+                <input id="sideEffectsInput"  class="form-control" type="text" placeholder="diziness, nausea" value="{{sideEffects}}">
+
+                <label id="personalEffectLabel" for="personalEffectInput">Personal Effect</label>
+                <input id="personalEffectInput"  class="form-control" type="text" placeholder="GOOD, OK, or BAD" value="{{personalEffect}}">
+
+                <label id="notesLabel" for="notesInput">Notes</label>
+                <input id="notesInput"  class="form-control" type="text" placeholder="Took and almost immediately needed to sit down" value="{{notes}}">
+
+              </form>
+            </div>
+            <div class="panel-footer">
+              <button id="upsertuserDrugButton" type="button" class="fullwidth btn btn-info" width="100%">Save userDrug</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</template>

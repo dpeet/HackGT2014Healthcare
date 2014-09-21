@@ -1,0 +1,33 @@
+<template name="userDrugPreviewPage">
+  <div id="userDrugPreviewPage" class="fullheight padded">
+    <div class="container">
+      <div class="col col-md-offset-3 col-md-6">
+
+        <!-- {{> userDrugCard }} -->
+        
+<div id="majorEventPreviewCard" class="card panel panel-default">
+        <div class="panel-heading">
+          <h2 id="name">{{name}}</h2>
+          <p id="chemicalName">{{chemicalName}}</p>
+          <h4 id="normalDosage">{{normalDosage}}</h4>
+        </div>
+        <div class="panel-body">
+          
+          <hr>
+
+          <h4 id="sideEffects">{{sideEffects}} </h4>
+          <h4 id="personalEffect">{{personalEffect}} </h4>
+          <h4 id="notes">{{notes}} </h4>
+
+
+        </div>
+          <div class="panel-footer">
+            <button id="userDrugEditButton" class="btn btn-warning">Edit userDrug</button>
+            <button id="userDrugDeleteButton" class="btn btn-danger">Delete userDrug</button>
+            <!-- <div>{{ _id }}</div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

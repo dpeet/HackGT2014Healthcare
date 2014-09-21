@@ -30,7 +30,14 @@ Template.map.rendered = function() {
             if (typeof h.lat !== 'undefined' &&
                 typeof h.long !== 'undefined') {
  
-                var contentString = "<h2>"+h.name+"</h2><br /><hr /><br /><p>" + h.streetaddress + "</p><br /><p>" + h.city + ", " + h.state + " " + h.zip + "</p>";
+                var contentString = '<div id="content">'+
+                  '<div id="siteNotice">'+
+                  '</div>'+
+                  '<h1 id="firstHeading" class="firstHeading">'+h.name+'</h1>'+
+                  '<div id="bodyContent">'+
+                  '<p>' + h.streetaddress + '</p><br />'+
+                  '<p>' + h.city + ', ' + h.state + ' ' + h.zip + '</p>'+
+                  '</div></div>';
                 var objMarker = {
                     id: h._id,
                     lat: h.lat,

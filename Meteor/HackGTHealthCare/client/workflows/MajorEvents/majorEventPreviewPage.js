@@ -5,9 +5,19 @@ Router.map(function(){
     template: 'majorEventPreviewPage',
     waitOn: function(){
       return Meteor.subscribe('majorEvents');
+      return Meteor.subscribe('hospital');
+      return Meteor.subscribe('userDrugs');
     },
     data: function () {
-      return MajorEvents.findOne({_id: this.params.id});
+      var e = MajorEvents.findOne({_id: this.params.id});
+      e.hospitalName = Hospitals.findOne({_id: e.hospitalId});
+      e.drugArray = e.drugs.split(',');
+      var tmpArr;
+      for (var i = 0; i < e.drugArray.length; i++) {
+        tmpArr.push(UserDrugs.findOne({_id: e.drugArray[i]}))
+      }
+      e.drugArray = tmpArr;
+      return e;
     },
   });
 });

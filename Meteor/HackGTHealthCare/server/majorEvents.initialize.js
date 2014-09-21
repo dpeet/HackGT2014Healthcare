@@ -29,7 +29,15 @@ Meteor.startup(function() {
 		var h3 = Hospitals.find({name: "Sutter Medical Center"}).fetch();
 		var h4 = Hospitals.find({name: "GaTech Student Center Ballroom"}).fetch();
 		
-		UserDrugs.insert({name: "Fentanyl", chemicalName: "", normalDosage: "100cc", sideEffects: "", personalEffect: "GOOD", notes: "Extremely effective anesthetic" });
+		UserDrugs.insert({
+		  name: "Fentanyl", 
+		  chemicalName: "", 
+		  normalDosage: "100cc", 
+		  sideEffects: "", 
+		  personalEffect: "GOOD", 
+		  notes: "Extremely effective anesthetic" 
+		});
+		
 		UserDrugs.insert({name: "Propofol", chemicalName: "", normalDosage: "10cc/hr", sideEffects: "Drug induced psychosis", personalEffect: "GOOD", notes: "Reacted well, no side effects or lasting problems noticed"});
 		UserDrugs.insert({name: "Ketamine", chemicalName: "", normalDosage: "", sideEffects: "", personalEffect: "BAD", notes: "Caused drug induced psychosis, and family emotional distress. Seek alternative strongly"});
 		UserDrugs.insert({name: "Cookies", chemicalName: "Chocolate Chip", normalDosage: "1 Cookie", sideEffects: "Happiness", personalEffect: "GOOD", notes: "Suggested take with milk"});
@@ -53,39 +61,9 @@ Meteor.startup(function() {
         "drugs": d1[0]._id + "," + d2[0]._id
       },
 
-      {
-        "title": "Hockey Dislocation - Grady",
-        "date": "5/3/2014",
-        "time": "5 pm",
-        "tags": "Shoulder",
-        "hospitalId": h2[0]._id,
-        "otherLocation": "",
-        "notes": "They put your shoulder back in at Gwinnett Medical Center - Duluth ER.",
-        "drugs": d1[0]._id + "," + d2[0]._id
-      },
-
-      {
-        "title": "Midnight Dislocation - Santa Rosa",
-        "date": "8/30/2014",
-        "time": "1:00",
-        "tags": "Shoulder",
-        "hospitalId": h3[0]._id,
-        "otherLocation": "",
-        "notes": "In the Grady trauma ER they performed the reduction on my right shoulder back in.  Afterwards both my left and right shoulders would sublux",
-        "drugs": d1[0]._id + "," + d3[0]._id
-      },
-
-      {
-        "title": "GaTech Blood Donation",
-        "date": "2014-06-31",
-        "time": "15:00",
-        "tags": "BloodDonation",
-        "hospitalId": h4[0]._id,
-        "otherLocation": "",
-        "notes": "Donated blood for the first time! They even gave us cookies and snacks to recover our strength",
-        "drugs": d4[0]._id + "," + d5[0]._id
-      }
-
+      {"title": "Hockey Dislocation - Grady","date": "5/3/2014","time": "5 pm","tags": "Shoulder","hospitalId": h2[0]._id,"otherLocation": "","notes": "They put your shoulder back in at Gwinnett Medical Center - Duluth ER.","drugs": d1[0]._id + "," + d2[0]._id},
+      {"title": "Midnight Dislocation - Santa Rosa","date": "8/30/2014","time": "1:00","tags": "Shoulder","hospitalId": h3[0]._id,"otherLocation": "","notes": "In the Grady trauma ER they performed the reduction on my right shoulder back in.  Afterwards both my left and right shoulders would sublux","drugs": d1[0]._id + "," + d3[0]._id},
+      {"title": "GaTech Blood Donation","date": "2014-06-31","time": "15:00","tags": "BloodDonation","hospitalId": h4[0]._id,"otherLocation": "","notes": "Donated blood for the first time! They even gave us cookies and snacks to recover our strength","drugs": d4[0]._id + "," + d5[0]._id}
     ];
 
 

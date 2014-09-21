@@ -4,3 +4,6 @@ Meteor.publish('majorEvents', function () {
 Meteor.publish('hospital', function () {
   return Hospital.find();
 });
+Meteor.publish('userDrugs', function () {
+  return UserDrugs.find();
+});

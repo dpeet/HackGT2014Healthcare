@@ -52,3 +52,4 @@ TODO
 Futre Work
 ------------------------
 * Logic around city/state/zip input, since you shouldn't have to put in all of them
+* Change matching tags (when searching) to label-info to show that they are matching

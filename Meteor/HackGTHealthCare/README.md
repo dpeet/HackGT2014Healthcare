@@ -41,7 +41,14 @@ TODO
 * Ensure Meteor.Accounts is added as a dependency in the repo (might need to push changes from dev's local copy)
 * Currently events list "Hospital Details" link routes through the MajorEvent Details page. Preferably it would ignore the majordetails if you click on the link
 * We should be able to generate a list of major events by tag
+* Go through adding each type, make sure initial data is formatted the same as inputted data
+* Suggest tags based on current tags
+* Picklist of states for input
+* Picklist of hospitals when adding majorevent
+* Picklist of drugs when adding majorevent (only allow picklist values - aka already created drugs)
+* Check logic for inputting each type, to make sure everything [still] works (specifically tags and drugs on majorevent - they got restructured)
 
 
 Futre Work
 ------------------------
+* Logic around city/state/zip input, since you shouldn't have to put in all of them

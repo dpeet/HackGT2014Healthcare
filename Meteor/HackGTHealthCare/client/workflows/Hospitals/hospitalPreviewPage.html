@@ -8,10 +8,12 @@
         <div id="hospitalPreviewCard" class="card panel panel-default">
           <div class="panel-heading">
             <h2><span id="name">{{name}}</span></h2>
+            <h4><span id="timesVisitedText">Times Visited: {{tv}}</span></h4>
             <p id="latLongText">{{lat}}, {{long}}</p>
           </div>
           <div class="panel-body">
-            <h4><span id="addressText">{{streetaddress}}<br />{{city}}, {{state}} {{zip}}</span></h4>
+            <h4>Address</h4>
+            <p>{{streetaddress}}<br />{{city}}, {{state}} {{zip}}</p>
           </div>
           <div class="panel-footer">
             <button id="hospitalEditButton" class="btn btn-warning">Edit Hospital</button>

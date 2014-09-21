@@ -5,9 +5,12 @@ Router.map(function(){
     template: 'hospitalPreviewPage',
     waitOn: function(){
       return Meteor.subscribe('hospital');
+      return Meteor.subscribe('majorEvents');
     },
     data: function () {
-      return Hospitals.findOne({_id: this.params.id});
+      var h = Hospitals.findOne({_id: this.params.id});
+      h.tv = MajorEvents.find({hospitalId: h._id}).count;
+      return h;
     },
   });
 });

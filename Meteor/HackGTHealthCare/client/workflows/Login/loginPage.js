@@ -11,7 +11,7 @@ Router.map(function(){
 
 
 
-Template.login.events({
+Template.loginPage.events({
   'click #logout-button': function() {
     Meteor.logout();
   }

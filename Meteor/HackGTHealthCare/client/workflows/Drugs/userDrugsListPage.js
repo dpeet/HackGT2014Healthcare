@@ -15,7 +15,7 @@ Router.map(function(){
     template: 'userDrugsListPage',
     waitOn: function(){
       return Meteor.subscribe('userDrugs');
-      
+    },
     data: function() {
       var d = UserDrugs.findOne({
         _id: this.params.id
@@ -27,7 +27,6 @@ Router.map(function(){
         d.label = "label-danger";
       }
       return d;
-    }
     }
   });
 });

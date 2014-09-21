@@ -9,7 +9,7 @@
           <div class="panel-heading">
             <h2><span id="title">{{title}}</span></h2>
             <h4><span id="dateText">Date: {{date}}</span><span id="timeText"> {{time}}</span></h4>
-            <p id="tagsText">tags: {{tags}}</p>
+            <p id="tagsText">tags: {{#each tags}}<span class="label label-sm">{{tag}}</span>{{/each}}</p>
           </div>
           <div class="panel-body">
             <h4>Hospital</h4>

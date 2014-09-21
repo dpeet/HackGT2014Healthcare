@@ -55,7 +55,7 @@ Template.loginForm.helpers({
   },
 
   createAccount: function(){
-    return Session.equals('formView', 'createAccountForm');
+    return Session.equals('formView', 'loginPage');
   },
 
   passwordRecovery: function(){
@@ -132,7 +132,7 @@ Template.loginForm.events({
   },
 
   'click #create-account' : function(e, t) {
-    Session.set('formView', 'createAccountForm');
+    Session.set('formView', 'loginPage');
   },
 
   'click a.google' : function(e, t){
@@ -162,7 +162,7 @@ Template.loginForm.destroyed = function(){
 };
 
 // Create an account and login the user.
-Template.createAccountForm.events({
+Template.loginPage.events({
 
   'submit #register-form' : function(e, t) {
     var email = trimInput(t.find('#account-email').value.toLowerCase())

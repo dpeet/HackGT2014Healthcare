@@ -7,21 +7,11 @@
 
         <div id="hospitalPreviewCard" class="card panel panel-default">
           <div class="panel-heading">
-            <h2><span id="title">{{title}}</span></h2>
-            <p id="tagsText">{{tags}}</p>
-            <h4><span id="dateText">{{date}}</span><span id="timeText"> {{time}}</span></h4>
+            <h2><span id="name">{{name}}</span></h2>
+            <p id="latLongText">{{lat}}, {{long}}</p>
           </div>
           <div class="panel-body">
-            <h4 id="hospitalIdText">{{hospitalId}}</h4>
-
-            <hr>
-
-            <h4 id="notesText">{{notes}} </h4>
-
-            <hr>
-
-            <h4 id="drugsText">{{drugs}} </h4>
-
+            <h4><span id="addressText">{{streetaddress}}<br />{{city}}, {{state}} {{zip}}</span></h4>
           </div>
           <div class="panel-footer">
             <button id="hospitalEditButton" class="btn btn-warning">Edit Hospital</button>

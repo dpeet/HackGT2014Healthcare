@@ -11,7 +11,15 @@ Meteor.startup(function() {
     
     var timestamp = new Date();
 		
-		Hospital.insert({name: "Grady", streetaddress: "80 Jesse Hill Jr Dr SE", city: "Atlanta", state: "GA", zip: 30303, lat: 33.752062, long: -84.382198});
+		Hospital.insert({
+		  name: "Grady", 
+		  streetaddress: "80 Jesse Hill Jr Dr SE", 
+		  city: "Atlanta", 
+		  state: "GA", 
+		  zip: 30303, 
+		  lat: 33.752062, 
+		  long: -84.382198});
+		  
 		Hospital.insert({name: "Duluth Medical", streetaddress: "3620 Howell Ferry Rd", city: "Duluth", state: "GA", zip: 30096, lat: 34.001413, long: -84.163569});
 		Hospital.insert({name: "Sutter Medical Center", streetaddress: "3325 Chanate Rd", city: "Santa Rosa", state: "CA", zip: 95404, lat: 38.469572, long: -122.707625});
 		

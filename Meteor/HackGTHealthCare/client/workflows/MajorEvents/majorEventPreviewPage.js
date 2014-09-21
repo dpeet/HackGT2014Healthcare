@@ -11,17 +11,16 @@ Router.map(function(){
     data: function () {
       var e = MajorEvents.findOne({_id: this.params.id});
       e.hospitalName = Hospitals.findOne({_id: e.hospitalId}).name;
-      e.drugArray = e.drugs.split(',');
       var tmpArr = new Array();
-      for (var i = 0; i < e.drugArray.length; i++) {
-        tmpArr[i] = UserDrugs.findOne({_id: e.drugArray[i]});
+      for (var i = 0; i < e.drugs.length; i++) {
+        tmpArr[i] = UserDrugs.findOne({_id: e.drugs[i]});
         if (tmpArr[i].personalEffect == "Good") {
           tmpArr[i].label = "label-success";
         } else if (tmpArr[i].personalEffect == "Bad") {
           tmpArr[i].label = "label-danger";
         }
       }
-      e.drugArray = tmpArr;
+      e.drugs = tmpArr;
       return e;
     },
   });

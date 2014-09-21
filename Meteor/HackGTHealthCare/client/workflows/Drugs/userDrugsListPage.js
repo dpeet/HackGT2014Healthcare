@@ -16,6 +16,7 @@ Router.map(function() {
     waitOn: function() {
       return Meteor.subscribe('userDrugs');
     },
+    /*
     data: function() {
       var d = UserDrugs.find({}).fetch();
       for (var i = 0; i < d.length; i++) {
@@ -28,6 +29,7 @@ Router.map(function() {
         return d;
       }
     },
+    */
   });
 });
 

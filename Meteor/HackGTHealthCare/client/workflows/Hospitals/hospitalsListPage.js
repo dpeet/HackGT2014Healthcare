@@ -134,7 +134,7 @@ Template.hospitalsListPage.helpers({
   getPaginationCount: function(){
     return Session.get('hospitalsPaginationCount');
   },
-  paginationButtonList: function(){
+  paginationButtonHospitalsList: function(){
     var paginationArray = [];
     for (var i = 0; i < Session.get('hospitalsPaginationCount'); i++) {
       paginationArray[i] = {
@@ -166,7 +166,7 @@ Template.hospitalsListPage.helpers({
 
 
 
-Template.paginationButton.helpers({
+Template.paginationButtonHospitals.helpers({
   pageActive: function(){
     if(this.index === Session.get('hospitalsSelectedPagination')){
       return "active";

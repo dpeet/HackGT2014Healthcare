@@ -9,9 +9,11 @@
         <hr />
         <br />
         <h1>Hospitals</h1>
-        {{#isolate}} {{> hospitalData}}
+        <!--{{#isolate}}-->
+        {{> hospitalData}}
         <hr />{{> hospitalsTable}}
-        <hr />{{> hospitalsListPaginationButtons}} {{/isolate}}
+        <hr />{{> hospitalsListPaginationButtons}}
+        <!--{{/isolate}}-->
       </div>
     </div>
   </div>
@@ -64,6 +66,10 @@
   <hr>
 
   <div id="hospitalsListPaginationButtons" class="btn-group">
-    {{#each paginationButtonList }} {{> paginationButton }} {{/each}}
+    {{#each paginationButtonHospitalsList }} {{> paginationButtonHospitals }} {{/each}}
   </div>
+</template>
+
+<template name="paginationButtonHospitals">
+  <button id="pagination-btn-{{index}}" class="{{pageActive}} pagination-btn btn btn-default">{{getPage}}</button>
 </template>

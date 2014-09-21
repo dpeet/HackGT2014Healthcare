@@ -2,7 +2,7 @@ Meteor.startup(function() {
   /* TODO remove this bit */
   Hospital.remove({});
   MajorEvents.remove({});
-  Drug.remove({});
+  UserDrugs.remove({});
   DrugUsage.remove({});
 
 
@@ -17,11 +17,11 @@ Meteor.startup(function() {
 		
 		var h = Hospital.find({name: "Grady"}).fetch();
 		
-		Drug.insert({name: "Fentanyl", normalDosage: "100cc", sideEffects: "", personalEffect: "GOOD", personalEffectNotes: "extremely effective" });
-		Drug.insert({name: "Propofol", normalDosage: "10cc/hr?", sideEffects: "", personalEffect: "GOOD", personalEffectNotes: "reacted well"});
-		Drug.insert({name: "Ketamine", normalDosage: "??", sideEffects: "", personalEffect: "BAD", personalEffectNotes: "caused drug induced psychosis.  DO NOT TAKE"});
+		UserDrugs.insert({name: "Fentanyl", normalDosage: "100cc", sideEffects: "", personalEffect: "GOOD", personalEffectNotes: "extremely effective" });
+		UserDrugs.insert({name: "Propofol", normalDosage: "10cc/hr?", sideEffects: "", personalEffect: "GOOD", personalEffectNotes: "reacted well"});
+		UserDrugs.insert({name: "Ketamine", normalDosage: "??", sideEffects: "", personalEffect: "BAD", personalEffectNotes: "caused drug induced psychosis.  DO NOT TAKE"});
 		
-		var d = Drug.find({name: "Fentanyl"}).fetch();
+		var d = UserDrugs.find({name: "Fentanyl"}).fetch();
 
     var data = [{
         "title": "Motorcycle Accident - Grady",
@@ -74,7 +74,7 @@ Meteor.startup(function() {
       });
 
     }
-    console.log('Not even 500 records successfully added to MajorEvents collection.');
+    console.log('Records successfully added to MajorEvents collection.');
   }
   console.log('MajorEvents collection initialized and ready.');
 });

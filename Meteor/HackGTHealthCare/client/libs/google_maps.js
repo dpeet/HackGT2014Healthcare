@@ -48,6 +48,7 @@ gmaps = {
             content: marker.contentString
         });
         google.maps.event.addListener(gMarker, 'click', function() {
+            map.panTo(gMarker.getPosition);
             infowindow.open(this.map, gMarker);
         });
 

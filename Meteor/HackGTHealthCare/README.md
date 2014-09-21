@@ -38,6 +38,7 @@ MIT License. Use as you wish, including for commercial purposes.
 TODO
 ------------------------
 * Rewrite this readme so its not this other persons thing
+* Ensure Meteor.Accounts is added as a dependency in the repo (might need to push changes from dev's local copy)
 
 
 Futre Work

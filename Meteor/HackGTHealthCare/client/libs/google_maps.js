@@ -45,11 +45,12 @@ gmaps = {
         this.markerData.push(marker);
 
         var infowindow = new google.maps.InfoWindow({
-            content: marker.contentString
+            content: marker.infoContent
         });
+        
         google.maps.event.addListener(gMarker, 'click', function() {
             this.map.panTo(gMarker.getPosition());
-            console.log("Opening Window " + gMarker.title + "at " + gMarker.getPosition());
+            console.log("Opening Window " + gMarker.title + " at " + gMarker.getPosition());
             infowindow.open(this.map, gMarker);
         });
 

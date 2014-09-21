@@ -27,7 +27,7 @@ DrugUsage.allow({
   }
 });
 
-Hospital.allow({
+Hospitals.allow({
   insert: function(){
     return true;
   },

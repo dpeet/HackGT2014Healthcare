@@ -55,10 +55,7 @@ Template.map.destroyed = function() {
 
 //------------------------------------------------
 // HELPERS
-
-
-
-Template.hospitalsListPage.helpers({
+Template.hospitalData.helpers({
   hospitalsList: function(){
     var hospitalsCount = Hospitals.find({$or:[
       {name: { $regex: Session.get('hospitalsSearchFilter'), $options: 'i' }},
@@ -95,11 +92,7 @@ Template.hospitalsListPage.helpers({
   }
 });
 
-
-
-
-
-Template.hospitalsListPage.events({
+Template.hospitalData.events({
   'keyup #hospitalsSearchInput':function(){
     Session.set('hospitalsSearchFilter', $('#hospitalsSearchInput').val());
     Session.setDefault('hospitalsSelectedPagination', 0);
@@ -127,7 +120,7 @@ Template.hospitalsListPage.events({
 });
 
 
-Template.hospitalsListPage.helpers({
+Template.hospitalData.helpers({
   getPaginationCount: function(){
     return Session.get('hospitalsPaginationCount');
   },

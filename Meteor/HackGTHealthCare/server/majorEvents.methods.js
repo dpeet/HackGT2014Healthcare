@@ -29,7 +29,7 @@ Meteor.methods({
       normalDosage:  data.normalDosage,
       sideEffects:  data.sideEffects,
       personalEffect:  data.personalEffect,
-      notes:  data.notes,
+      notes:  data.notes
 
     }});
   },

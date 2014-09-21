@@ -10,11 +10,16 @@ Router.map(function(){
     },
     data: function () {
       var e = MajorEvents.findOne({_id: this.params.id});
-      e.hospitalName = Hospitals.findOne({_id: e.hospitalId});
+      e.hospitalName = Hospitals.findOne({_id: e.hospitalId}).name;
       e.drugArray = e.drugs.split(',');
       var tmpArr = new Array();
       for (var i = 0; i < e.drugArray.length; i++) {
         tmpArr[i] = UserDrugs.findOne({_id: e.drugArray[i]});
+        if (tmpArr[i].personalEffect == "Good") {
+          tmpArr[i].btn = "btn-success";
+        } else if (tmpArr[i].personalEffect == "Bad") {
+          tmpArr[i].btn = "btn-danger";
+        }
       }
       e.drugArray = tmpArr;
       return e;

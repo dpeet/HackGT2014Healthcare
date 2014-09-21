@@ -34,14 +34,14 @@ Meteor.startup(function() {
 		  chemicalName: "", 
 		  normalDosage: "100cc", 
 		  sideEffects: "", 
-		  personalEffect: "GOOD", 
+		  personalEffect: "Good", 
 		  notes: "Extremely effective anesthetic" 
 		});
 		
-		UserDrugs.insert({name: "Propofol", chemicalName: "", normalDosage: "10cc/hr", sideEffects: "Drug induced psychosis", personalEffect: "GOOD", notes: "Reacted well, no side effects or lasting problems noticed"});
-		UserDrugs.insert({name: "Ketamine", chemicalName: "", normalDosage: "", sideEffects: "", personalEffect: "BAD", notes: "Caused drug induced psychosis, and family emotional distress. Seek alternative strongly"});
-		UserDrugs.insert({name: "Cookies", chemicalName: "Chocolate Chip", normalDosage: "1 Cookie", sideEffects: "Happiness", personalEffect: "GOOD", notes: "Suggested take with milk"});
-		UserDrugs.insert({name: "Fig Newtons", chemicalName: "NewtonusFigians", normalDosage: "1 Sleeve", sideEffects: "Happiness", personalEffect: "GOOD", notes: "Suggested eat crumbs as well"});
+		UserDrugs.insert({name: "Propofol", chemicalName: "", normalDosage: "10cc/hr", sideEffects: "Drug induced psychosis", personalEffect: "Good", notes: "Reacted well, no side effects or lasting problems noticed"});
+		UserDrugs.insert({name: "Ketamine", chemicalName: "", normalDosage: "", sideEffects: "", personalEffect: "Bad", notes: "Caused drug induced psychosis, and family emotional distress. Seek alternative strongly"});
+		UserDrugs.insert({name: "Cookies", chemicalName: "Chocolate Chip", normalDosage: "1 Cookie", sideEffects: "Happiness", personalEffect: "Good", notes: "Suggested take with milk"});
+		UserDrugs.insert({name: "Fig Newtons", chemicalName: "NewtonusFigians", normalDosage: "1 Sleeve", sideEffects: "Happiness", personalEffect: "Good", notes: "Suggested eat crumbs as well"});
 		
 		var d1 = UserDrugs.find({name: "Fentanyl"}).fetch();
 		var d2 = UserDrugs.find({name: "Propofol"}).fetch();

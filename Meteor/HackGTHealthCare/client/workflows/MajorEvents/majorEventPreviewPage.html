@@ -12,16 +12,35 @@
             <p id="tagsText">tags: {{tags}}</p>
           </div>
           <div class="panel-body">
-            <h4 id="hospitalIdText">{{hospitalId}}</h4>
+            <h4>Hospital</h4>
+            <p id="hospitalIdText btn" href="/hospital/{{hospitalId}}">{{hospitalName}}</p>
 
             <hr>
-
-            <h4 id="notesText">{{notes}} </h4>
+            
+            <h4>Notes</h4>
+            <p id="notesText">{{notes}} </p>
 
             <hr>
-            {{#each drugArray}}
-            <h4 id="drugsText">{{name}} </h4>
-            {{/each}}
+            
+            <h4>Drugs</h4>
+            <table id="majorEventDrugsTable" class="table table-hover table-striped tablesorter">
+              <thead id="majorEventDrugsTableHeader">
+                <tr id="majorEventDrugsTableHeaderRow">
+                  <th id="nameColumn">Name</th>
+                  <th id="personalEffectColumn">Personal Effect</th>
+                </tr>
+              </thead>
+              <tbody id="majorEventDrugsTableBody">
+                {{#each drugArray}}
+                <tr>
+                  <td id="drugName-{{_id}}">{{name}}</td>
+                  <td id="drugPersonalEffect-{{_id}}">
+                    <div class="btn {{btn}}">{{personalEffect}}</div>
+                  </td>
+                </tr>
+                {{/each}}
+              </tbody>
+              </table>
 
           </div>
           <div class="panel-footer">

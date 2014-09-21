@@ -23,7 +23,7 @@ Router.configure({
 Router.map(function(){
   this.route('homeRoute', {
     path: '/',
-    template: "loginPage"
+    template: "majorEvents"
   });
 });
 

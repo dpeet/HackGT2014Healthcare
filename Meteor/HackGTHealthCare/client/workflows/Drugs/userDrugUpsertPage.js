@@ -78,7 +78,7 @@ Template.userDrugUpsertPage.events({
 Template.userDrugUpsertPage.helpers({
   getRecordId: function() {
     if(this._id) {
-      return this._id;
+      return "Id: " + this._id;
     }else{
       return "---";
     }

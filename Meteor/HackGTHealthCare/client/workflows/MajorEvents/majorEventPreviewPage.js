@@ -16,9 +16,9 @@ Router.map(function(){
       for (var i = 0; i < e.drugArray.length; i++) {
         tmpArr[i] = UserDrugs.findOne({_id: e.drugArray[i]});
         if (tmpArr[i].personalEffect == "Good") {
-          tmpArr[i].btn = "btn-success";
+          tmpArr[i].label = "label-success";
         } else if (tmpArr[i].personalEffect == "Bad") {
-          tmpArr[i].btn = "btn-danger";
+          tmpArr[i].label = "label-danger";
         }
       }
       e.drugArray = tmpArr;

@@ -16,12 +16,12 @@
             <p id="hospitalIdText btn" href="/hospital/{{hospitalId}}">{{hospitalName}}</p>
 
             <hr>
-            
+
             <h4>Notes</h4>
-            <p id="notesText">{{notes}} </p>
+            <p id="notesText">{{notes}}</p>
 
             <hr>
-            
+
             <h4>Drugs</h4>
             <table id="majorEventDrugsTable" class="table table-hover table-striped tablesorter">
               <thead id="majorEventDrugsTableHeader">
@@ -35,12 +35,12 @@
                 <tr>
                   <td id="drugName-{{_id}}">{{name}}</td>
                   <td id="drugPersonalEffect-{{_id}}">
-                    <div class="btn {{btn}}">{{personalEffect}}</div>
+                    <div class="label label-md {{label}}">{{personalEffect}}</div>
                   </td>
                 </tr>
                 {{/each}}
               </tbody>
-              </table>
+            </table>
 
           </div>
           <div class="panel-footer">

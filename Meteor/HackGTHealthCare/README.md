@@ -35,7 +35,7 @@ Licensing
 MIT License. Use as you wish, including for commercial purposes.
 
 
-TODO
+TODO / Low Hanging Fruit
 ------------------------
 * Rewrite this readme so its not this other persons thing
 * Ensure Meteor.Accounts is added as a dependency in the repo (might need to push changes from dev's local copy)
@@ -47,9 +47,11 @@ TODO
 * Picklist of hospitals when adding majorevent
 * Picklist of drugs when adding majorevent (only allow picklist values - aka already created drugs)
 * Check logic for inputting each type, to make sure everything [still] works (specifically tags and drugs on majorevent - they got restructured)
+* Make "Good" and "Bad" labels in drug list
 
 
-Futre Work
+Futre Work / Stretch Goals
 ------------------------
 * Logic around city/state/zip input, since you shouldn't have to put in all of them
 * Change matching tags (when searching) to label-info to show that they are matching
+* Navbar color splash

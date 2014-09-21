@@ -40,6 +40,7 @@ TODO
 * Rewrite this readme so its not this other persons thing
 * Ensure Meteor.Accounts is added as a dependency in the repo (might need to push changes from dev's local copy)
 * Currently events list "Hospital Details" link routes through the MajorEvent Details page. Preferably it would ignore the majordetails if you click on the link
+* We should be able to generate a list of major events by tag
 
 
 Futre Work

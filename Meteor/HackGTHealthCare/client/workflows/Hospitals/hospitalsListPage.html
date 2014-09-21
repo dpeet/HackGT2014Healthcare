@@ -4,17 +4,9 @@
       <div class="row">
         {{> map}}
       </div>
-      <div class="row">
-        <br />
-        <hr />
-        <br />
-        <h1>Hospitals</h1>
-        <!--{{#isolate}}-->
-        {{> hospitalData}}
-        <!-- <hr />{{> hospitalsTable}}
-        <hr />{{> hospitalsListPaginationButtons}} -->
-        <!--{{/isolate}}-->
-      </div>
+      <hr />
+      <h1>Hospitals</h1>
+      {{> hospitalData}}
     </div>
   </div>
 </template>
@@ -26,20 +18,23 @@
 </template>
 
 <template name="hospitalData">
-  <div class="col col-md-1">
-    <a class="btn btn-success" id="hospitalLink" href="/newHospital">New Hospital</a>
-  </div>
-  <div class="col col-md-6">
-    <input id="hospitalSearchInput" type="text" class="form-control" placeholder="search..." />
-  </div>
-  <div class="centered col col-md-5">
-    <div id="hospitalsListLimitButtons" class="pull-right btn-group">
-      <button id="twentyButton" class="{{isTwentyActive}} btn btn-default">20</button>
-      <button id="fiftyButton" class="{{isFiftyActive}} btn btn-default">50</button>
-      <button id="hundredButton" class="{{isHundredActive}} btn btn-default">100</button>
+  <div class="row">
+    <div class="col col-md-1">
+      <a class="btn btn-success" id="hospitalLink" href="/newHospital">New Hospital</a>
+    </div>
+    <div class="col col-md-6">
+      <input id="hospitalSearchInput" type="text" class="form-control" placeholder="search..." />
+    </div>
+    <div class="centered col col-md-5">
+      <div id="hospitalsListLimitButtons" class="pull-right btn-group">
+        <button id="twentyButton" class="{{isTwentyActive}} btn btn-default">20</button>
+        <button id="fiftyButton" class="{{isFiftyActive}} btn btn-default">50</button>
+        <button id="hundredButton" class="{{isHundredActive}} btn btn-default">100</button>
+      </div>
     </div>
   </div>
-  <hr/>
+  
+  <hr />
 
   <table id="hospitalsTable" class="table table-hover table-striped tablesorter">
     <thead id="hospitalsTableHeader">
@@ -61,7 +56,7 @@
       {{/each}}
     </tbody>
   </table>
-  <hr>
+  <hr />
 
   <div id="hospitalsListPaginationButtons" class="btn-group">
     {{#each paginationButtonHospitalsList }} {{> paginationButtonHospitals }} {{/each}}

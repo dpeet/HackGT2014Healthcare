@@ -1,9 +1,9 @@
-Drug = new Meteor.Collection("drug");
+UserDrugs = new Meteor.Collection("userDrugs");
 DrugUsage = new Meteor.Collection("drugUsage");
 Hospital = new Meteor.Collection("hospital");
 MajorEvents = new Meteor.Collection("majorEvents");
 
-Drug.allow({
+UserDrugs.allow({
   insert: function(){
     return true;
   },
